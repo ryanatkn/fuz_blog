@@ -21,6 +21,8 @@
 				<a href={to_pathname(item.url, feed.home_page_url)}>{item.title}</a>
 				<div class="date"><Feed_Item_Date {item} /></div>
 			</li>
+		{:else}
+			no blog posts yet!
 		{/each}
 	</ol>
 	<a class="feed_link chip" href="{base}/blog/feed.xml" download>Atom feed</a>
