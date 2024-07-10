@@ -4,7 +4,7 @@
   "description": "blog software from scratch with SvelteKit",
   "glyph": "🖊️",
   "logo": "logo.svg",
-  "logo_alt": "a friendly pixelated spider facing you",
+  "logo_alt": "a friendly yellow spider facing you",
   "public": true,
   "homepage": "https://blog.fuz.dev/",
   "repository": "https://github.com/ryanatkn/fuz_blog",
