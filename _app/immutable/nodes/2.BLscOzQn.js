@@ -1,1 +1,0 @@
-import{a as o,t}from"../chunks/disclose-version.DuPn2mZ-.js";var s=t('<main class="svelte-aa2n4y"><section class="box"><header><h1 class="mt_xl2">fuz_blog</h1></header> <blockquote>blog software from scratch with SvelteKit</blockquote></section></main>');function l(a){var e=s();o(a,e)}export{l as component};
