@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.1.4
+
+### Patch Changes
+
+- fix import to package not local in feed generation ([3ec86cf](https://github.com/ryanatkn/fuz_blog/commit/3ec86cf))
+
 ## 0.1.3
 
 ### Patch Changes
