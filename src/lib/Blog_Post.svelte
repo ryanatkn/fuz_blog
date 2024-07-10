@@ -26,9 +26,7 @@
 
 {#if item}
 	<article class:width_md={true} {...attrs}>
-		<header>
-			<Blog_Post_Header {item} />
-		</header>
+		<Blog_Post_Header {item} />
 		{@render children()}
 		<hr />
 		<Blog_Post_Footer {item} />

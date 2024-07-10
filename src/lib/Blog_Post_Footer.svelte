@@ -10,8 +10,8 @@
 	item; // TODO
 </script>
 
-<footer class="blog-post-footer">
-	<div class="panel">
+<footer>
+	<div class="panel p_lg">
 		<p>
 			<span>
 				find me on <a href="https://joinmastodon.org/">Mastodon</a> and
@@ -24,13 +24,10 @@
 </footer>
 
 <style>
-	.blog-post-footer {
+	footer {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-	.panel {
-		padding: var(--space_lg);
 	}
 </style>

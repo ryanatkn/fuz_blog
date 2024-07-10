@@ -9,7 +9,9 @@
 	const {item}: Props = $props();
 </script>
 
-<h1 class="mt_xl5 mb_lg">{item.title}</h1>
-<p class="mb_xl5">
-	<Feed_Item_Date {item} />
-</p>
+<header>
+	<h1 class="mt_xl5 mb_lg">{item.title}</h1>
+	<p class="mb_xl5">
+		<Feed_Item_Date {item} />
+	</p>
+</header>

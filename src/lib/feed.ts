@@ -35,6 +35,7 @@ export interface Feed {
 	// 	feed_url: string;
 	//  expired?: boolean;
 	// };
+	// TODO support RSS
 }
 
 export interface Feed_Item {
