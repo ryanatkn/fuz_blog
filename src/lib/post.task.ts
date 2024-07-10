@@ -35,7 +35,7 @@ export const task: Task<Args> = {
 
 		const unformatted = `
 			<script lang="ts" context="module">
-				import type {Blog_Post_Data} from '$lib/blog.js';
+				import type {Blog_Post_Data} from '@ryanatkn/fuz_blog/blog.js';
 
 				export const post = {
 					title: 'Some title todo',
