@@ -14,6 +14,6 @@ export const blog: Blog_Feed_Data = {
 		email: 'mail@ryanatkn.com',
 	},
 	atom: {
-		feed_url: 'https://blog.fuz/dev/blog/feed.xml',
+		feed_url: 'https://blog.fuz.dev/blog/feed.xml',
 	},
 };

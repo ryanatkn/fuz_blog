@@ -10,7 +10,7 @@ export const feed: Blog_Feed = {
 	icon: 'https://blog.fuz.dev/favicon.png',
 	favicon: 'https://blog.fuz.dev/favicon.png',
 	author: {name: 'Ryan Atkinson', url: 'https://www.ryanatkn.com/', email: 'mail@ryanatkn.com'},
-	atom: {feed_url: 'https://blog.fuz/dev/blog/feed.xml'},
+	atom: {feed_url: 'https://blog.fuz.dev/blog/feed.xml'},
 	items: [
 		{
 			id: 'https://blog.fuz.dev/blog/1',
