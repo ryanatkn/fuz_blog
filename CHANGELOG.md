@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.1.5
+
+### Patch Changes
+
+- fix blog post page title ([03d38a2](https://github.com/ryanatkn/fuz_blog/commit/03d38a2))
+
 ## 0.1.4
 
 ### Patch Changes
