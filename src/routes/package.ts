@@ -25,6 +25,7 @@ export const package_json = {
 	type: 'module',
 	engines: {node: '>=20.12'},
 	devDependencies: {
+		'@changesets/changelog-git': '^0.2.0',
 		'@ryanatkn/belt': '^0.24.4',
 		'@ryanatkn/eslint-config': '^0.4.0',
 		'@ryanatkn/fuz': '^0.108.4',
