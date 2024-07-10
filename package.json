@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "blog software from scratch with SvelteKit",
   "glyph": "🖊️",
   "logo": "logo.svg",
