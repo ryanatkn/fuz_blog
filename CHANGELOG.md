@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.1.3
+
+### Patch Changes
+
+- fix import to blog.ts not .js ([f4be22d](https://github.com/ryanatkn/fuz_blog/commit/f4be22d))
+
 ## 0.1.2
 
 ### Patch Changes
