@@ -13,6 +13,9 @@
 	<section>
 		<Card href="{base}/blog" icon="🖊️">blog</Card>
 	</section>
+	<footer>
+		<a href="https://github.com/ryanatkn/fuz_blog">source code</a>
+	</footer>
 </main>
 
 <style>
