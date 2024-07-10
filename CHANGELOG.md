@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.1.2
+
+### Patch Changes
+
+- fix path import in blog helpers ([595b886](https://github.com/ryanatkn/fuz_blog/commit/595b886))
+
 ## 0.1.1
 
 ### Patch Changes
