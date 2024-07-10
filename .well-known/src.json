@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "modules": {
     "./package.json": {
       "path": "package.json",
