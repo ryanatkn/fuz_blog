@@ -10,12 +10,16 @@
 	import type {Snippet} from 'svelte';
 
 	import Settings from '$routes/Settings.svelte';
+	import {set_blog_feed} from '$lib/blog.js';
+	import {feed} from '$routes/blog/feed.js';
 
 	interface Props {
 		children: Snippet;
 	}
 
 	const {children}: Props = $props();
+
+	set_blog_feed(feed);
 
 	let show_settings = $state(false);
 </script>
