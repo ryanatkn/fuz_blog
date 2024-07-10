@@ -17,12 +17,12 @@
   
   <entry>
     <id>https://blog.fuz.dev/blog/1</id>
-    <title>Some title todo</title>
-    <link rel="alternate" href="https://blog.fuz.dev/blog/some-title-todo" />
+    <title>Hello fuz_blog</title>
+    <link rel="alternate" href="https://blog.fuz.dev/blog/hello-fuz-blog" />
     <published>2024-07-10T16:04:49.688Z</published>
     <updated>2024-07-10T16:04:49.688Z</updated>
-    <summary>todo</summary>
-    <category term="todo" />
+    <summary>fuz_blog is now a reusable library</summary>
+    <category term="blog software" /><category term="sveltekit" />
   </entry>
 
 </feed>

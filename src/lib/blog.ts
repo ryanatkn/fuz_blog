@@ -54,7 +54,7 @@ export interface Blog_Post_Item extends Blog_Post_Data {
 	/**
 	 * Incrementing 1-based integer.
 	 */
-	blog_post_id: Blog_Post_Id;
+	blog_post_id: Blog_Post_Id; // TODO maybe random?
 
 	tags: string[]; // required
 }

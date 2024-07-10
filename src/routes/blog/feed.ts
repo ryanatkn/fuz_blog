@@ -14,14 +14,14 @@ export const feed: Blog_Feed = {
 	items: [
 		{
 			id: 'https://blog.fuz.dev/blog/1',
-			url: 'https://blog.fuz.dev/blog/some-title-todo',
+			url: 'https://blog.fuz.dev/blog/hello-fuz-blog',
 			blog_post_id: 1,
-			title: 'Some title todo',
-			slug: 'some-title-todo',
+			title: 'Hello fuz_blog',
+			slug: 'hello-fuz-blog',
 			date_published: '2024-07-10T16:04:49.688Z',
 			date_modified: '2024-07-10T16:04:49.688Z',
-			summary: 'todo',
-			tags: ['todo'],
+			summary: 'fuz_blog is now a reusable library',
+			tags: ['blog software', 'sveltekit'],
 		},
 	],
 };

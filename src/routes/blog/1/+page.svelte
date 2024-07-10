@@ -13,8 +13,12 @@
 
 <script lang="ts">
 	import {base} from '$app/paths';
+
+	import Blog_Post from '$lib/Blog_Post.svelte';
 </script>
 
-<p>
-	<a href="{base}/a/b/c">todo a local link example</a>
-</p>
+<Blog_Post {post}>
+	<p>
+		<a href="{base}/a/b/c">todo a local link example</a>
+	</p>
+</Blog_Post>
