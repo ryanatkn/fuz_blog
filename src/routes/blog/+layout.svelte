@@ -19,7 +19,7 @@
 <div class="wrapper">
 	{@render children()}
 </div>
-<div class="breadcrumbs">
+<div class="breadcrumbs mb_xl5">
 	<Breadcrumb><Fuz_Blog_Logo /></Breadcrumb>
 </div>
 
