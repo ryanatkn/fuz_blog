@@ -15,7 +15,7 @@
 <main class="width_md">
 	<section class="box">
 		<header class="box">
-			<h1 class="mt_xl2">fuz_template</h1>
+			<h1 class="mt_xl2">fuz_blog</h1>
 		</header>
 		<div style:--size="var(--size_xl)">
 			<Breadcrumb>{package_json.glyph}</Breadcrumb>
