@@ -3,6 +3,7 @@ import {z} from 'zod';
 import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
+import {load_package_json} from '@ryanatkn/gro/package_json.js';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
 
@@ -20,6 +21,10 @@ export const task: Task<Args> = {
 	run: async ({args, log, invoke_task}) => {
 		const {date = new Date().toISOString()} = args;
 
+		const package_json = load_package_json();
+		const fuz_blog_import_path =
+			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
+
 		// TODO @multiple parameterize and refactor
 		const dir = process.cwd();
 		const blog_dirname = 'blog';
@@ -34,7 +39,7 @@ export const task: Task<Args> = {
 
 		const unformatted = `
 			<script lang="ts" context="module">
-				import type {Blog_Post_Data} from '@ryanatkn/fuz_blog/blog.js';
+				import type {Blog_Post_Data} from '${fuz_blog_import_path}/blog.js';
 
 				export const post = {
 					title: 'Some title todo',
