@@ -2,7 +2,6 @@
 	import {base} from '$app/paths';
 
 	import Feed_Item_Date from '$lib/Feed_Item_Date.svelte';
-	import Page_Links from '$routes/Page_Links.svelte';
 	import {get_blog_feed} from '$lib/blog.js';
 	import {to_pathname} from '$lib/util.js';
 
@@ -25,9 +24,6 @@
 		{/each}
 	</ol>
 	<a class="feed_link chip" href="{base}/blog/feed.xml" download>Atom feed</a>
-</section>
-<section class="box gap_xl2 mb_xl7">
-	<Page_Links />
 </section>
 
 <style>

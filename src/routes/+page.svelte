@@ -1,5 +1,6 @@
 <script lang="ts">
-	//
+	import {base} from '$app/paths';
+	import Card from '@ryanatkn/fuz/Card.svelte';
 </script>
 
 <main>
@@ -8,6 +9,9 @@
 			<h1 class="mt_xl2">fuz_blog</h1>
 		</header>
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
+	</section>
+	<section>
+		<Card href="{base}/blog" icon="🖊️">blog</Card>
 	</section>
 </main>
 
