@@ -26,6 +26,8 @@
 
 <svelte:head>
 	<title>fuz_blog</title>
+	<!-- TODO add JSONFeed -->
+	<link rel="alternate" type="application/atom+xml" title="Atom" href={feed.atom.feed_url} />
 </svelte:head>
 
 <svelte:body

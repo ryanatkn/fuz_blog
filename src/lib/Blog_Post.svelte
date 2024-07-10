@@ -20,7 +20,8 @@
 </script>
 
 <svelte:head>
-	<title>{post.title} - ryanatkn.com/blog</title>
+	<!-- TODO title suffix like - ryanatkn.com/blog -->
+	<title>{post.title}</title>
 </svelte:head>
 
 {#if item}

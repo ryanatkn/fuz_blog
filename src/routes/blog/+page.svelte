@@ -10,10 +10,6 @@
 	const items = feed.items.slice().reverse();
 </script>
 
-<svelte:head>
-	<title>ryanatkn.com/blog</title>
-</svelte:head>
-
 <section class="blog">
 	<ol class="panel" reversed>
 		{#each items as item}
