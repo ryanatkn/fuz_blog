@@ -1,0 +1,10 @@
+{
+  "name": "@ryanatkn/fuz_blog",
+  "version": "0.0.1",
+  "modules": {
+    "./package.json": {
+      "path": "package.json",
+      "declarations": []
+    }
+  }
+}
