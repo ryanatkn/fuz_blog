@@ -2,7 +2,6 @@ import type {Task} from '@ryanatkn/gro';
 import {z} from 'zod';
 import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
-import {cwd} from 'node:process';
 import {dirname, join} from 'node:path';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
@@ -22,7 +21,7 @@ export const task: Task<Args> = {
 		const {date = new Date().toISOString()} = args;
 
 		// TODO @multiple parameterize and refactor
-		const dir = cwd();
+		const dir = process.cwd();
 		const blog_dirname = 'blog';
 		const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 		const blog_dir = join(dir, routes_path, blog_dirname);

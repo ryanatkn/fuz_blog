@@ -44,10 +44,10 @@ export const collect_blog_post_ids = (blog_dir: string): Blog_Post_Id[] => {
 };
 
 export const load_blog_post_modules = (
+	blog_dir: string,
 	blog_post_ids: Blog_Post_Id[],
-	blog_dirname: string,
 ): Promise<Blog_Post_Module[]> =>
-	Promise.all(blog_post_ids.map((item) => import(`$routes/${blog_dirname}/${item}/+page.svelte`)));
+	Promise.all(blog_post_ids.map((item) => import(join(blog_dir, item.toString(), '+page.svelte'))));
 
 export const to_next_blog_post_id = (blog_post_ids: Blog_Post_Id[]): Blog_Post_Id => {
 	const last = blog_post_ids.at(-1);

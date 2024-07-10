@@ -1,5 +1,4 @@
 import type {Gen} from '@ryanatkn/gro/gen.js';
-import {cwd} from 'node:process';
 import {join, relative} from 'node:path';
 
 import {create_atom_feed} from '$lib/feed.js';
@@ -10,11 +9,9 @@ import {
 } from '$lib/blog_helpers.js';
 import type {Blog_Feed, Blog_Module} from '$lib/blog.js';
 
-// TODO extract to @ryanatkn/fuz_blog
-
 export const gen: Gen = async ({origin_id}) => {
 	// TODO @multiple parameterize and refactor
-	const dir = cwd();
+	const dir = process.cwd();
 	const blog_dirname = 'blog';
 	const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 	const blog_dir = join(dir, routes_path, blog_dirname);
@@ -24,7 +21,7 @@ export const gen: Gen = async ({origin_id}) => {
 
 	const blog_post_ids = collect_blog_post_ids(blog_dir);
 
-	const modules = await load_blog_post_modules(blog_post_ids, blog_dirname);
+	const modules = await load_blog_post_modules(blog_dir, blog_post_ids);
 
 	// TODO zod schema validation including parsing the status context url (with zod?)
 	// for (const mod of modules) {
