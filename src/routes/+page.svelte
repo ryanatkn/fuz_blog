@@ -29,7 +29,8 @@
 				content={`<!-- src/routes/+layout.svelte -->
 ${'<'}script lang="ts">
 	import {set_blog_feed, get_blog_feed} from '@ryanatkn/fuz_blog/blog.js';
-	import {feed} from '@ryanatkn/fuz_blog/feed.js';
+
+	import {feed} from '$routes/blog/feed.js';
 
 	set_blog_feed(feed);
 
