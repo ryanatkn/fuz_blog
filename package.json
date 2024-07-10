@@ -64,5 +64,8 @@
   ],
   "files": [
     "dist"
-  ]
+  ],
+  "exports": {
+    "./package.json": "./package.json"
+  }
 }
