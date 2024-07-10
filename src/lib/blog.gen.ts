@@ -15,7 +15,7 @@ export const gen: Gen = async ({origin_id}) => {
 	const blog_dirname = 'blog';
 	const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 	const blog_dir = join(dir, routes_path, blog_dirname);
-	const {blog} = (await import(join(blog_dir, 'blog.js'))) as Blog_Module; // TODO zod parse
+	const {blog} = (await import(join(blog_dir, 'blog.ts'))) as Blog_Module; // TODO zod parse
 
 	const generated_by = relative(dir, origin_id);
 
