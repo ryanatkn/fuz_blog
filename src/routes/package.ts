@@ -27,6 +27,7 @@ export const package_json = {
 	peerDependencies: {
 		'@ryanatkn/belt': '*',
 		'@ryanatkn/fuz': '*',
+		'@ryanatkn/gro': '*',
 		'@ryanatkn/moss': '*',
 		'@sveltejs/kit': '^2',
 		'date-fns': '^3',
