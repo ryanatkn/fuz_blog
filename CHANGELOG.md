@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.2.0
+
+### Minor Changes
+
+- add gro peer dep ([8800dc6](https://github.com/ryanatkn/fuz_blog/commit/8800dc6))
+
 ## 0.1.5
 
 ### Patch Changes
