@@ -1,6 +1,7 @@
 <script lang="ts">
 	import {base} from '$app/paths';
 	import Card from '@ryanatkn/fuz/Card.svelte';
+	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 	// TODO @multiple why is this import needed? `Code` already imports it. Fails in dev with SSR enabled without it. Is there a Vite config option that would be better? I tried the combinations of `ssr.external/noExternal/external` with `@ryanatkn/fuz_code` and `prismjs`.
 	import 'prismjs';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
@@ -10,8 +11,9 @@
 
 <main class="box">
 	<section class="box">
-		<header>
-			<h1 class="mt_xl2">fuz_blog</h1>
+		<header class="pt_xl2">
+			<Fuz_Logo project="fuz_blog" size="var(--icon_size_xl3)" />
+			<h1 class="mt_xl2 text_align_center">fuz_blog</h1>
 		</header>
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
 	</section>
