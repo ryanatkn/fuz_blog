@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
 	import type {Snippet} from 'svelte';
-
-	import Fuz_Blog_Logo from '$routes/Fuz_Blog_Logo.svelte';
+	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 
 	interface Props {
 		children: Snippet;
@@ -14,13 +13,13 @@
 </script>
 
 <div class="breadcrumbs">
-	<Breadcrumb><Fuz_Blog_Logo /></Breadcrumb>
+	<Breadcrumb><Fuz_Logo project="fuz_blog" /></Breadcrumb>
 </div>
 <div class="wrapper">
 	{@render children()}
 </div>
 <div class="breadcrumbs mb_xl5">
-	<Breadcrumb><Fuz_Blog_Logo /></Breadcrumb>
+	<Breadcrumb><Fuz_Logo project="fuz_blog" /></Breadcrumb>
 </div>
 
 <!-- TODO 404, needs to work with prerendering -->
