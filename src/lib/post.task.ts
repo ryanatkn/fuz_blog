@@ -4,12 +4,13 @@ import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
+import {slugify} from '@ryanatkn/belt/path.js';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
 
-// TODO consider `_` args like `new` and `0` to bump the `updated` date
 const Args = z
 	.object({
+		title: z.string({description: 'post title'}),
 		date: z.string({description: "the post's date_published"}).optional(),
 	})
 	.strict();
@@ -19,7 +20,10 @@ export const task: Task<Args> = {
 	summary: 'create a new blog post',
 	Args,
 	run: async ({args, log, invoke_task}) => {
-		const {date = new Date().toISOString()} = args;
+		const {title, date = new Date().toISOString()} = args;
+		console.log(`title`, title); // TODO BLOCK test with ' in the title
+
+		const slug = slugify(title);
 
 		const package_json = load_package_json();
 		const fuz_blog_import_path =
@@ -42,13 +46,13 @@ export const task: Task<Args> = {
 				import type {Blog_Post_Data} from '${fuz_blog_import_path}/blog.js';
 
 				export const post = {
-					title: 'Some title todo',
-					slug: 'some-title-todo',
+					title: '${title}',
+					slug: '${slug}',
 					date_published: '${date}',
 					date_modified: '${date}',
 					summary: 'todo',
 					tags: ['todo'],
-				} satisfies  Blog_Post_Data;
+				} satisfies Blog_Post_Data;
 			</script>
 
 			<script lang="ts">
