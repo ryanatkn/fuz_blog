@@ -101,6 +101,7 @@ export const package_json = {
 		},
 		'./util.js': {types: './dist/util.d.ts', default: './dist/util.js'},
 	},
+	dependencies: {'@ryanatkn/fuz_mastodon': '^0.17.0'},
 } satisfies Package_Json;
 
 export const src_json = {
