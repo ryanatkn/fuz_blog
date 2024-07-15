@@ -1,4 +1,4 @@
-import type {Task} from '@ryanatkn/gro';
+import {Task_Error, type Task} from '@ryanatkn/gro';
 import {z} from 'zod';
 import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
@@ -10,7 +10,7 @@ import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js'
 
 const Args = z
 	.object({
-		title: z.string({description: 'post title'}),
+		_: z.array(z.string(), {description: 'post title'}).default([]),
 		date: z.string({description: "the post's date_published"}).optional(),
 	})
 	.strict();
@@ -20,8 +20,14 @@ export const task: Task<Args> = {
 	summary: 'create a new blog post',
 	Args,
 	run: async ({args, log, invoke_task}) => {
-		const {title: raw_title, date = new Date().toISOString()} = args;
+		const {
+			_: [raw_title],
+			date = new Date().toISOString(),
+		} = args;
 
+		if (!raw_title) {
+			throw new Task_Error('post title is required');
+		}
 		const title = raw_title.trim();
 		const slug = slugify(title);
 
