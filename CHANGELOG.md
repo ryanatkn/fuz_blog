@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- add `gro post` title support ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
+- add `gro post` title support ([#4](https://github.com/ryanatkn/fuz_blog/pull/4), [067f9b0](https://github.com/ryanatkn/fuz_blog/commit/067f9b007900a57487d02f43b96231f2ae039ddb))
 - update blog post footer ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
 
   - unpublish `Blog_Post_Footer`
