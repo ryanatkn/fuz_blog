@@ -7,7 +7,7 @@
   <subtitle>blog software from scratch with SvelteKit</subtitle>
   <link href="https://blog.fuz.dev/" />
   <link href="https://blog.fuz.dev/blog/feed.xml" rel="self" type="application/atom+xml" />
-	<updated>2024-07-15T16:41:26.039Z</updated>
+	<updated>2024-07-15T16:45:11.447Z</updated>
   <icon>https://blog.fuz.dev/favicon.png</icon>
   <author>
     <name>Ryan Atkinson</name>
@@ -20,7 +20,7 @@
     <title>Hello fuz_blog</title>
     <link rel="alternate" href="https://blog.fuz.dev/blog/hello-fuz-blog" />
     <published>2024-07-10T16:04:49.688Z</published>
-    <updated>2024-07-15T16:41:26.039Z</updated>
+    <updated>2024-07-15T16:45:11.447Z</updated>
     <summary>fuz_blog is now a reusable library</summary>
     <category term="blog software" /><category term="sveltekit" />
   </entry>

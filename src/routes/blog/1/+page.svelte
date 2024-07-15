@@ -5,7 +5,7 @@
 		title: 'Hello fuz_blog',
 		slug: 'hello-fuz-blog',
 		date_published: '2024-07-10T16:04:49.688Z',
-		date_modified: '2024-07-15T16:41:26.039Z',
+		date_modified: '2024-07-15T16:45:11.447Z',
 		summary: 'fuz_blog is now a reusable library',
 		tags: ['blog software', 'sveltekit'],
 		// TODO automated comments

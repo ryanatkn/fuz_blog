@@ -1,5 +1,5 @@
 import {Task_Error, type Task} from '@ryanatkn/gro';
-import {readFileSync, writeFileSync} from 'node:fs';
+import {existsSync, readFileSync, writeFileSync} from 'node:fs';
 import {z} from 'zod';
 
 const Args = z
@@ -26,6 +26,9 @@ export const task: Task<Args> = {
 
 		// TODO @multiple harcoded `/blog/`
 		const filename = `src/routes/blog/${id}/+page.svelte`;
+		if (!existsSync(filename)) {
+			throw new Task_Error(`post with id '${id}' not found at path '${filename}'`);
+		}
 		const content = readFileSync(filename, 'utf8');
 		const updated_content = content.replace(/date_modified: '.*'/u, `date_modified: '${date}'`);
 		writeFileSync(filename, updated_content, 'utf8');
