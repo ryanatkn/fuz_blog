@@ -20,9 +20,9 @@ export const task: Task<Args> = {
 	summary: 'create a new blog post',
 	Args,
 	run: async ({args, log, invoke_task}) => {
-		const {title, date = new Date().toISOString()} = args;
-		console.log(`title`, title); // TODO BLOCK test with ' in the title
+		const {title: raw_title, date = new Date().toISOString()} = args;
 
+		const title = raw_title.trim();
 		const slug = slugify(title);
 
 		const package_json = load_package_json();
@@ -46,7 +46,7 @@ export const task: Task<Args> = {
 				import type {Blog_Post_Data} from '${fuz_blog_import_path}/blog.js';
 
 				export const post = {
-					title: '${title}',
+					title: ${JSON.stringify(title)},
 					slug: '${slug}',
 					date_published: '${date}',
 					date_modified: '${date}',
