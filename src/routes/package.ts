@@ -5,7 +5,7 @@ import type {Src_Json} from '@ryanatkn/gro/src_json.js';
 
 export const package_json = {
 	name: '@ryanatkn/fuz_blog',
-	version: '0.3.0',
+	version: '0.4.0',
 	description: 'blog software from scratch with SvelteKit',
 	glyph: '🖊️',
 	logo: 'logo.svg',
@@ -107,7 +107,7 @@ export const package_json = {
 
 export const src_json = {
 	name: '@ryanatkn/fuz_blog',
-	version: '0.3.0',
+	version: '0.4.0',
 	modules: {
 		'./package.json': {path: 'package.json', declarations: []},
 		'./blog_helpers.js': {

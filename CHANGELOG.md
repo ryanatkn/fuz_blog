@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.4.0
+
+### Minor Changes
+
+- add automatic Mastodon comments ([#5](https://github.com/ryanatkn/fuz_blog/pull/5))
+
 ## 0.3.0
 
 ### Minor Changes
