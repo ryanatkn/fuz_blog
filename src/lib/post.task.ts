@@ -25,11 +25,12 @@ export const task: Task<Args> = {
 		const title = raw_title.trim();
 		const slug = slugify(title);
 
+		// TODO @multiple parameterize and refactor
+
 		const package_json = load_package_json();
 		const fuz_blog_import_path =
 			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
 
-		// TODO @multiple parameterize and refactor
 		const dir = process.cwd();
 		const blog_dirname = 'blog';
 		const routes_path = 'src/routes'; // TODO read from SvelteKit config;
@@ -56,12 +57,15 @@ export const task: Task<Args> = {
 			</script>
 
 			<script lang="ts">
-				import {base} from '$app/paths';
+				import Blog_Post from '${fuz_blog_import_path}/Blog_Post.svelte';
 			</script>
 
-			<p>
-				<a href="{base}/a/b/c">todo a local link example</a>
-			</p>
+			<!-- This component is totally optional, you have full control over the page. -->
+			<Blog_Post {post}>
+				<p>
+					TODO content goes here
+				</p>
+			</Blog_Post>
 		`;
 		const formatted = await format_file(unformatted, {parser: 'svelte'});
 

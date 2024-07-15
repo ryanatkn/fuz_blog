@@ -28,6 +28,7 @@
 	<article class:width_md={true} {...attrs}>
 		<Blog_Post_Header {item} />
 		{@render children()}
+		<!-- TODO maybe make this hr optional or conditional on other content? -->
 		<hr />
 		{#if footer}{@render footer()}{/if}
 	</article>
