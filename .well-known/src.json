@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "modules": {
     "./package.json": {
       "path": "package.json",
@@ -61,6 +61,14 @@
         },
         {
           "name": "Blog_Post_Data",
+          "kind": "type"
+        },
+        {
+          "name": "Blog_Comments",
+          "kind": "type"
+        },
+        {
+          "name": "Mastodon_Blog_Comments",
           "kind": "type"
         },
         {
