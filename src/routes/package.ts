@@ -27,6 +27,7 @@ export const package_json = {
 	peerDependencies: {
 		'@ryanatkn/belt': '*',
 		'@ryanatkn/fuz': '*',
+		'@ryanatkn/fuz_mastodon': '*',
 		'@ryanatkn/gro': '*',
 		'@ryanatkn/moss': '*',
 		'@sveltejs/kit': '^2',
@@ -39,6 +40,7 @@ export const package_json = {
 		'@ryanatkn/eslint-config': '^0.4.0',
 		'@ryanatkn/fuz': '^0.108.5',
 		'@ryanatkn/fuz_code': '^0.15.2',
+		'@ryanatkn/fuz_mastodon': '^0.17.0',
 		'@ryanatkn/gro': '^0.130.1',
 		'@ryanatkn/moss': '^0.7.1',
 		'@sveltejs/adapter-static': '^3.0.2',
@@ -101,7 +103,6 @@ export const package_json = {
 		},
 		'./util.js': {types: './dist/util.d.ts', default: './dist/util.js'},
 	},
-	dependencies: {'@ryanatkn/fuz_mastodon': '^0.17.0'},
 } satisfies Package_Json;
 
 export const src_json = {
