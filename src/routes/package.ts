@@ -53,11 +53,11 @@ export const package_json = {
 		'eslint-plugin-svelte': '^2.42.0',
 		prettier: '^3.3.3',
 		'prettier-plugin-svelte': '^3.2.5',
-		svelte: '^5.0.0-next.184',
+		svelte: '^5.0.0-next.181',
 		'svelte-check': '^3.8.4',
 		tslib: '^2.6.3',
 		typescript: '^5.5.3',
-		'typescript-eslint': '^8.0.0-alpha.41',
+		'typescript-eslint': '^8.0.0-alpha.44',
 		uvu: '^0.5.6',
 	},
 	prettier: {
