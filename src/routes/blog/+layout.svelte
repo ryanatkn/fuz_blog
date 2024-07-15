@@ -13,13 +13,13 @@
 </script>
 
 <div class="breadcrumbs">
-	<Breadcrumb><Fuz_Logo project="fuz_blog" /></Breadcrumb>
+	<Breadcrumb><Fuz_Logo project="fuz_blog" size="var(--size_xl)" /></Breadcrumb>
 </div>
 <div class="wrapper">
 	{@render children()}
 </div>
 <div class="breadcrumbs mb_xl5">
-	<Breadcrumb><Fuz_Logo project="fuz_blog" /></Breadcrumb>
+	<Breadcrumb><Fuz_Logo project="fuz_blog" size="var(--size_xl)" /></Breadcrumb>
 </div>
 
 <!-- TODO 404, needs to work with prerendering -->
