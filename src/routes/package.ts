@@ -128,6 +128,8 @@ export const src_json = {
 				{name: 'Blog_Feed_Data', kind: 'type'},
 				{name: 'Blog_Feed', kind: 'type'},
 				{name: 'Blog_Post_Data', kind: 'type'},
+				{name: 'Blog_Comments', kind: 'type'},
+				{name: 'Mastodon_Blog_Comments', kind: 'type'},
 				{name: 'Blog_Module', kind: 'type'},
 				{name: 'Blog_Post_Module', kind: 'type'},
 				{name: 'Blog_Post_Id', kind: 'type'},
