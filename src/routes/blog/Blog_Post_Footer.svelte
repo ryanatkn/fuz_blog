@@ -1,13 +1,5 @@
 <script lang="ts">
-	import type {Blog_Post_Item} from '$lib/blog.js';
-
-	interface Props {
-		item: Blog_Post_Item;
-	}
-
-	const {item}: Props = $props();
-
-	item; // TODO
+	// TODO should we publish a `Blog_Post_Footer`? what's useful to do in it?
 </script>
 
 <footer>

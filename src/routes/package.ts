@@ -71,11 +71,6 @@ export const package_json = {
 	exports: {
 		'./package.json': './package.json',
 		'./blog_helpers.js': {types: './dist/blog_helpers.d.ts', default: './dist/blog_helpers.js'},
-		'./Blog_Post_Footer.svelte': {
-			types: './dist/Blog_Post_Footer.svelte.d.ts',
-			svelte: './dist/Blog_Post_Footer.svelte',
-			default: './dist/Blog_Post_Footer.svelte',
-		},
 		'./Blog_Post_Header.svelte': {
 			types: './dist/Blog_Post_Header.svelte.d.ts',
 			svelte: './dist/Blog_Post_Header.svelte',
@@ -119,7 +114,6 @@ export const src_json = {
 				{name: 'to_blog_post_path', kind: 'function'},
 			],
 		},
-		'./Blog_Post_Footer.svelte': {path: 'Blog_Post_Footer.svelte', declarations: []},
 		'./Blog_Post_Header.svelte': {path: 'Blog_Post_Header.svelte', declarations: []},
 		'./Blog_Post.svelte': {path: 'Blog_Post.svelte', declarations: []},
 		'./blog.gen.js': {path: 'blog.gen.ts', declarations: [{name: 'gen', kind: 'variable'}]},

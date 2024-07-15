@@ -13,6 +13,7 @@
 
 <script lang="ts">
 	import Blog_Post from '$lib/Blog_Post.svelte';
+	import Blog_Post_Footer from '$routes/blog/Blog_Post_Footer.svelte';
 </script>
 
 <Blog_Post {post}>
@@ -29,4 +30,7 @@
 			href="https://github.com/ryanatkn/fuz_blog/pull/1">PR #1</a
 		>.
 	</p>
+	{#snippet footer()}
+		<Blog_Post_Footer />
+	{/snippet}
 </Blog_Post>
