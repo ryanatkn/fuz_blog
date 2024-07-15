@@ -30,7 +30,7 @@ export const task: Task<Args> = {
 			throw new Task_Error(`post with id '${id}' not found at path '${filename}'`);
 		}
 		const content = readFileSync(filename, 'utf8');
-		const updated_content = content.replace(/date_modified: '.*'/u, `date_modified: '${date}'`);
+		const updated_content = content.replace(/date_modified: '.*'/, `date_modified: '${date}'`);
 		writeFileSync(filename, updated_content, 'utf8');
 
 		await invoke_task('gen');
