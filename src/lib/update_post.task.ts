@@ -1,5 +1,5 @@
 import {Task_Error, type Task} from '@ryanatkn/gro';
-import {existsSync, readFileSync, writeFileSync} from 'node:fs';
+import {readFileSync, writeFileSync} from 'node:fs';
 import {z} from 'zod';
 
 const Args = z
