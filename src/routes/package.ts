@@ -35,11 +35,11 @@ export const package_json = {
 	},
 	devDependencies: {
 		'@changesets/changelog-git': '^0.2.0',
-		'@ryanatkn/belt': '^0.24.4',
+		'@ryanatkn/belt': '^0.24.6',
 		'@ryanatkn/eslint-config': '^0.4.0',
 		'@ryanatkn/fuz': '^0.108.5',
 		'@ryanatkn/fuz_code': '^0.15.2',
-		'@ryanatkn/gro': '^0.130.0',
+		'@ryanatkn/gro': '^0.130.1',
 		'@ryanatkn/moss': '^0.7.1',
 		'@sveltejs/adapter-static': '^3.0.2',
 		'@sveltejs/kit': '^2.5.18',
@@ -71,11 +71,6 @@ export const package_json = {
 	exports: {
 		'./package.json': './package.json',
 		'./blog_helpers.js': {types: './dist/blog_helpers.d.ts', default: './dist/blog_helpers.js'},
-		'./Blog_Post_Footer.svelte': {
-			types: './dist/Blog_Post_Footer.svelte.d.ts',
-			svelte: './dist/Blog_Post_Footer.svelte',
-			default: './dist/Blog_Post_Footer.svelte',
-		},
 		'./Blog_Post_Header.svelte': {
 			types: './dist/Blog_Post_Header.svelte.d.ts',
 			svelte: './dist/Blog_Post_Header.svelte',
@@ -100,6 +95,10 @@ export const package_json = {
 			default: './dist/Hash_Link.svelte',
 		},
 		'./post.task.js': {types: './dist/post.task.d.ts', default: './dist/post.task.js'},
+		'./update_post.task.js': {
+			types: './dist/update_post.task.d.ts',
+			default: './dist/update_post.task.js',
+		},
 		'./util.js': {types: './dist/util.d.ts', default: './dist/util.js'},
 	},
 } satisfies Package_Json;
@@ -119,7 +118,6 @@ export const src_json = {
 				{name: 'to_blog_post_path', kind: 'function'},
 			],
 		},
-		'./Blog_Post_Footer.svelte': {path: 'Blog_Post_Footer.svelte', declarations: []},
 		'./Blog_Post_Header.svelte': {path: 'Blog_Post_Header.svelte', declarations: []},
 		'./Blog_Post.svelte': {path: 'Blog_Post.svelte', declarations: []},
 		'./blog.gen.js': {path: 'blog.gen.ts', declarations: [{name: 'gen', kind: 'variable'}]},
@@ -148,6 +146,10 @@ export const src_json = {
 		},
 		'./Hash_Link.svelte': {path: 'Hash_Link.svelte', declarations: []},
 		'./post.task.js': {path: 'post.task.ts', declarations: [{name: 'task', kind: 'variable'}]},
+		'./update_post.task.js': {
+			path: 'update_post.task.ts',
+			declarations: [{name: 'task', kind: 'variable'}],
+		},
 		'./util.js': {
 			path: 'util.ts',
 			declarations: [

@@ -12,14 +12,12 @@
 	// TODO standardize
 </script>
 
-<main class="width_md">
+<main class="mx_auto p_lg width_md">
 	<section class="box">
 		<header class="box">
 			<h1 class="mt_xl2">fuz_blog</h1>
 		</header>
-		<div style:--size="var(--size_xl)">
-			<Breadcrumb>{package_json.glyph}</Breadcrumb>
-		</div>
+		<Breadcrumb>{package_json.glyph}</Breadcrumb>
 	</section>
 	<Community_Links_Panel />
 	<section class="box w_100 mb_lg">
@@ -28,17 +26,15 @@
 		</div>
 	</section>
 	<section class="box">
-		<Library_Footer {pkg} root_url="https://www.fuz.dev/" />
+		<Library_Footer {pkg} root_url="https://www.fuz.dev/">
+			<div class="mb_xl3">
+				<Breadcrumb>{package_json.glyph}</Breadcrumb>
+			</div>
+		</Library_Footer>
 	</section>
 </main>
 
 <style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 0 auto;
-	}
 	h1 {
 		display: flex;
 		align-items: baseline;

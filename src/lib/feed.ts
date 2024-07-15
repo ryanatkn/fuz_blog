@@ -23,6 +23,7 @@ export interface Feed {
 		url?: string;
 		email?: string;
 	};
+	// TODO date_modified for entire feed?
 	items: Feed_Item[];
 	atom: {
 		feed_url: string;

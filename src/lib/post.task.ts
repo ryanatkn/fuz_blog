@@ -4,12 +4,13 @@ import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
+import {slugify} from '@ryanatkn/belt/path.js';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
 
-// TODO consider `_` args like `new` and `0` to bump the `updated` date
 const Args = z
 	.object({
+		title: z.string({description: 'post title'}),
 		date: z.string({description: "the post's date_published"}).optional(),
 	})
 	.strict();
@@ -19,15 +20,19 @@ export const task: Task<Args> = {
 	summary: 'create a new blog post',
 	Args,
 	run: async ({args, log, invoke_task}) => {
-		const {date = new Date().toISOString()} = args;
+		const {title: raw_title, date = new Date().toISOString()} = args;
+
+		const title = raw_title.trim();
+		const slug = slugify(title);
+
+		// TODO @multiple parameterize and refactor
 
 		const package_json = load_package_json();
 		const fuz_blog_import_path =
 			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
 
-		// TODO @multiple parameterize and refactor
 		const dir = process.cwd();
-		const blog_dirname = 'blog';
+		const blog_dirname = 'blog'; // TODO @multiple harcoded `/blog/`
 		const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 		const blog_dir = join(dir, routes_path, blog_dirname);
 
@@ -42,22 +47,25 @@ export const task: Task<Args> = {
 				import type {Blog_Post_Data} from '${fuz_blog_import_path}/blog.js';
 
 				export const post = {
-					title: 'Some title todo',
-					slug: 'some-title-todo',
+					title: ${JSON.stringify(title)},
+					slug: '${slug}',
 					date_published: '${date}',
 					date_modified: '${date}',
 					summary: 'todo',
 					tags: ['todo'],
-				} satisfies  Blog_Post_Data;
+				} satisfies Blog_Post_Data;
 			</script>
 
 			<script lang="ts">
-				import {base} from '$app/paths';
+				import Blog_Post from '${fuz_blog_import_path}/Blog_Post.svelte';
 			</script>
 
-			<p>
-				<a href="{base}/a/b/c">todo a local link example</a>
-			</p>
+			<!-- This component is totally optional, you have full control over the page. -->
+			<Blog_Post {post}>
+				<p>
+					TODO content goes here
+				</p>
+			</Blog_Post>
 		`;
 		const formatted = await format_file(unformatted, {parser: 'svelte'});
 

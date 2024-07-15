@@ -3,16 +3,16 @@
 	import type {Snippet} from 'svelte';
 
 	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
-	import Blog_Post_Footer from '$lib/Blog_Post_Footer.svelte';
 	import {get_blog_feed, type Blog_Post_Data} from '$lib/blog.js';
 
 	interface Props {
 		post: Blog_Post_Data;
 		attrs?: SvelteHTMLElements['article'] | undefined;
+		footer?: Snippet;
 		children: Snippet;
 	}
 
-	const {post, attrs, children}: Props = $props();
+	const {post, attrs, footer, children}: Props = $props();
 
 	const feed = get_blog_feed();
 
@@ -28,8 +28,9 @@
 	<article class:width_md={true} {...attrs}>
 		<Blog_Post_Header {item} />
 		{@render children()}
+		<!-- TODO maybe make this hr optional or conditional on other content? -->
 		<hr />
-		<Blog_Post_Footer {item} />
+		{#if footer}{@render footer()}{/if}
 	</article>
 {:else}
 	<div>cannot find post <code>{post.slug}</code></div>
