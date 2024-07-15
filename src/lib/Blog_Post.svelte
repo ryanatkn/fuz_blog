@@ -10,10 +10,11 @@
 		post: Blog_Post_Data;
 		attrs?: SvelteHTMLElements['article'] | undefined;
 		footer?: Snippet;
+		separator?: Snippet; // TODO currently only used before comments, maybe rename to `comments_header` or something?
 		children: Snippet;
 	}
 
-	const {post, attrs, footer, children}: Props = $props();
+	const {post, attrs, footer, separator = default_separator, children}: Props = $props();
 
 	const feed = get_blog_feed();
 
@@ -26,31 +27,35 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-{#if item}
-	<article class="width_md" {...attrs}>
-		<Blog_Post_Header {item} />
-		{@render children()}
-		<!-- TODO maybe make this hr optional or conditional on other content? -->
-		<hr />
-		{#if footer}{@render footer()}{/if}
-	</article>
-	{#if item.comments}
-		<!-- TODO the storage key is weird -->
-		<!-- TODO use local cache in dev -->
-		<!-- TODO remove `:any` when fuz_mastodon types are fixed -->
-		<section class="width_md">
-			<h2>Comments</h2>
-			<Toot
-				url={item.comments.url}
-				replies
-				autoload={true}
-				reply_filter_rules={(item: any) => [
-					{type: 'favourited_by', favourited_by: [item.account.acct]},
-				]}
-				storage_key="{item.id}_comments"
-			/>
-		</section>
+<div class="blog_post width_md">
+	{#if item}
+		<article {...attrs}>
+			<Blog_Post_Header {item} />
+			{@render children()}
+			{#if footer}{@render footer()}{/if}
+			{#if item.comments}
+				{@render separator()}
+				<!-- TODO the storage key is weird -->
+				<!-- TODO use local cache in dev -->
+				<!-- TODO remove `:any` when fuz_mastodon types are fixed -->
+				<section>
+					<h2>Comments</h2>
+					<Toot
+						url={item.comments.url}
+						replies
+						autoload={true}
+						reply_filter_rules={(item: any) => [
+							{type: 'favourited_by', favourited_by: [item.account.acct]},
+						]}
+						storage_key="{item.id}_comments"
+					/>
+				</section>
+				{@render separator()}
+			{/if}
+		</article>
+	{:else}
+		<div>cannot find post <code>{post.slug}</code></div>
 	{/if}
-{:else}
-	<div>cannot find post <code>{post.slug}</code></div>
-{/if}
+</div>
+
+{#snippet default_separator()}<hr />{/snippet}

@@ -18,7 +18,7 @@
 <div class="wrapper">
 	{@render children()}
 </div>
-<div class="breadcrumbs mb_xl5">
+<div class="breadcrumbs mb_xl9">
 	<Breadcrumb><Fuz_Logo project="fuz_blog" size="var(--size_xl)" /></Breadcrumb>
 </div>
 
