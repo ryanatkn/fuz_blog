@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.4.1
+
+### Patch Changes
+
+- add optional separator snippet to `Blog_Post` ([effd757](https://github.com/ryanatkn/fuz_blog/commit/effd757))
+
 ## 0.4.0
 
 ### Minor Changes
