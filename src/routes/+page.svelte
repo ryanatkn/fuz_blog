@@ -3,7 +3,7 @@
 	import Card from '@ryanatkn/fuz/Card.svelte';
 	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
-	// TODO @multiple why is this import needed? `Code` already imports it. Fails in dev with SSR enabled without it. Is there a Vite config option that would be better? I tried the combinations of `ssr.external/noExternal/external` with `@ryanatkn/fuz_code` and `prismjs`.
+	// TODO @many why is this import needed? `Code` already imports it. Fails in dev with SSR enabled without it. Is there a Vite config option that would be better? I tried the combinations of `ssr.external/noExternal/external` with `@ryanatkn/fuz_code` and `prismjs`.
 	import 'prismjs';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';

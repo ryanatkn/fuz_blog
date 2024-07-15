@@ -11,7 +11,7 @@ import {
 import type {Blog_Feed, Blog_Module} from '$lib/blog.js';
 
 export const gen: Gen = async ({origin_id}) => {
-	// TODO @multiple parameterize and refactor
+	// TODO @many parameterize and refactor
 
 	const package_json = load_package_json();
 	const fuz_blog_import_path =
@@ -42,7 +42,7 @@ export const gen: Gen = async ({origin_id}) => {
 
 	return [
 		{
-			// TODO @multiple harcoded `/blog/`
+			// TODO @many harcoded /blog/
 			filename: join(dir, 'static/blog/feed.xml'),
 			content: create_atom_feed(feed),
 		},

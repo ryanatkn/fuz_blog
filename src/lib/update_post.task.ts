@@ -24,7 +24,7 @@ export const task: Task<Args> = {
 			throw new Task_Error('post id is required');
 		}
 
-		// TODO @multiple harcoded `/blog/`
+		// TODO @many harcoded /blog/
 		const filename = `src/routes/blog/${id}/+page.svelte`;
 		if (!existsSync(filename)) {
 			throw new Task_Error(`post with id '${id}' not found at path '${filename}'`);

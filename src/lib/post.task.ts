@@ -31,14 +31,14 @@ export const task: Task<Args> = {
 		const title = raw_title.trim();
 		const slug = slugify(title);
 
-		// TODO @multiple parameterize and refactor
+		// TODO @many parameterize and refactor
 
 		const package_json = load_package_json();
 		const fuz_blog_import_path =
 			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
 
 		const dir = process.cwd();
-		const blog_dirname = 'blog'; // TODO @multiple harcoded `/blog/`
+		const blog_dirname = 'blog'; // TODO @many harcoded /blog/
 		const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 		const blog_dir = join(dir, routes_path, blog_dirname);
 
