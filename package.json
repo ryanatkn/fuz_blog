@@ -120,6 +120,10 @@
       "types": "./dist/post.task.d.ts",
       "default": "./dist/post.task.js"
     },
+    "./update_post.task.js": {
+      "types": "./dist/update_post.task.d.ts",
+      "default": "./dist/update_post.task.js"
+    },
     "./util.js": {
       "types": "./dist/util.d.ts",
       "default": "./dist/util.js"

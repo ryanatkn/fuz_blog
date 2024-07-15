@@ -95,6 +95,10 @@ export const package_json = {
 			default: './dist/Hash_Link.svelte',
 		},
 		'./post.task.js': {types: './dist/post.task.d.ts', default: './dist/post.task.js'},
+		'./update_post.task.js': {
+			types: './dist/update_post.task.d.ts',
+			default: './dist/update_post.task.js',
+		},
 		'./util.js': {types: './dist/util.d.ts', default: './dist/util.js'},
 	},
 } satisfies Package_Json;
@@ -142,6 +146,10 @@ export const src_json = {
 		},
 		'./Hash_Link.svelte': {path: 'Hash_Link.svelte', declarations: []},
 		'./post.task.js': {path: 'post.task.ts', declarations: [{name: 'task', kind: 'variable'}]},
+		'./update_post.task.js': {
+			path: 'update_post.task.ts',
+			declarations: [{name: 'task', kind: 'variable'}],
+		},
 		'./util.js': {
 			path: 'util.ts',
 			declarations: [

@@ -32,7 +32,7 @@ export const task: Task<Args> = {
 			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
 
 		const dir = process.cwd();
-		const blog_dirname = 'blog';
+		const blog_dirname = 'blog'; // TODO @multiple harcoded `/blog/`
 		const routes_path = 'src/routes'; // TODO read from SvelteKit config;
 		const blog_dir = join(dir, routes_path, blog_dirname);
 

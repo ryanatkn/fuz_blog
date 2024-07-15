@@ -26,7 +26,7 @@
 	<section class="box">
 		<Card href="{base}/blog" icon="🖊️">blog</Card>
 	</section>
-	<section class="box">
+	<section>
 		<h2>Docs</h2>
 		<aside>⚠️ Docs are a work in progress!</aside>
 		<p>
@@ -54,6 +54,16 @@ ${'<'}script lang="ts">
 		href={feed.atom.feed_url}
 	/>
 </svelte:head>`}
+		/>
+		<h3>Create a new post</h3>
+		<Code
+			content={`$ gro post "Some post title"
+$ gro post --help`}
+		/>
+		<h3>Update an existing post</h3>
+		<Code
+			content={`$ gro update_post 1
+$ gro update_post --help`}
 		/>
 	</section>
 	<section class="mb_xl5 box">

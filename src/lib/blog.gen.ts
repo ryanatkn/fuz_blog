@@ -42,6 +42,7 @@ export const gen: Gen = async ({origin_id}) => {
 
 	return [
 		{
+			// TODO @multiple harcoded `/blog/`
 			filename: join(dir, 'static/blog/feed.xml'),
 			content: create_atom_feed(feed),
 		},
