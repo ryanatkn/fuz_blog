@@ -1,5 +1,19 @@
 # @ryanatkn/fuz_blog
 
+## 0.3.0
+
+### Minor Changes
+
+- add `gro post` title support ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
+- update blog post footer ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
+
+  - unpublish `Blog_Post_Footer`
+  - add `footer` snippet prop to `Blog_Post`
+
+### Patch Changes
+
+- add `gro update_post` task ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
+
 ## 0.2.0
 
 ### Minor Changes
