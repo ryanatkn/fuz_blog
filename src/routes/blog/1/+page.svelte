@@ -8,11 +8,10 @@
 		date_modified: '2024-07-15T16:45:11.447Z',
 		summary: 'fuz_blog is now a reusable library',
 		tags: ['blog software', 'sveltekit'],
-		// TODO automated comments
-		// comments: {
-		// 	url: '..',
-		// 	type: 'mastodon'
-		// }
+		comments: {
+			url: 'https://mastodon.social/@webdevladder/112791910038764650',
+			type: 'mastodon',
+		},
 	} satisfies Blog_Post_Data;
 </script>
 

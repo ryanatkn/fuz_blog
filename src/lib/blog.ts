@@ -23,10 +23,15 @@ export interface Blog_Post_Data {
 	date_modified: string; // TODO maybe calculated instead of manually defined?
 	summary: string;
 	tags?: string[];
-	comments?: {
-		url: string;
-		type: 'mastodon';
-	};
+	comments?: Blog_Comments;
+}
+
+// TODO support other comment providers
+export type Blog_Comments = Mastodon_Blog_Comments;
+
+export interface Mastodon_Blog_Comments {
+	url: string;
+	type: 'mastodon';
 }
 
 export interface Blog_Module {
