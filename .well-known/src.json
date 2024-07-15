@@ -31,10 +31,6 @@
         }
       ]
     },
-    "./Blog_Post_Footer.svelte": {
-      "path": "Blog_Post_Footer.svelte",
-      "declarations": []
-    },
     "./Blog_Post_Header.svelte": {
       "path": "Blog_Post_Header.svelte",
       "declarations": []
@@ -120,6 +116,15 @@
     },
     "./post.task.js": {
       "path": "post.task.ts",
+      "declarations": [
+        {
+          "name": "task",
+          "kind": "variable"
+        }
+      ]
+    },
+    "./update_post.task.js": {
+      "path": "update_post.task.ts",
       "declarations": [
         {
           "name": "task",
