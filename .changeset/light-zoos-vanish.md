@@ -1,5 +1,8 @@
 ---
-"@ryanatkn/fuz_blog": minor
+'@ryanatkn/fuz_blog': minor
 ---
 
-unpublish `Blog_Post_Footer`
+update blog post footer
+
+- unpublish `Blog_Post_Footer`
+- add `footer` snippet prop to `Blog_Post`
