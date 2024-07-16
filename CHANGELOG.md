@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.5.0
+
+### Minor Changes
+
+- pin peer deps ([#6](https://github.com/ryanatkn/fuz_blog/pull/6))
+
 ## 0.4.1
 
 ### Patch Changes
