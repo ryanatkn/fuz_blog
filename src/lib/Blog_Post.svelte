@@ -37,16 +37,13 @@
 				{@render separator()}
 				<!-- TODO the storage key is weird -->
 				<!-- TODO use local cache in dev -->
-				<!-- TODO remove `:any` when fuz_mastodon types are fixed -->
 				<section>
 					<h2>Comments</h2>
 					<Toot
 						url={item.comments.url}
-						replies
-						autoload={true}
-						reply_filter_rules={(item: any) => [
-							{type: 'favourited_by', favourited_by: [item.account.acct]},
-						]}
+						include_replies
+						initial_autoload
+						reply_filters={(item) => [{type: 'favourited_by', favourited_by: [item.account.acct]}]}
 						storage_key="{item.id}_comments"
 					/>
 				</section>
