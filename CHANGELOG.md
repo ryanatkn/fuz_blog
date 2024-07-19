@@ -1,5 +1,15 @@
 # @ryanatkn/fuz_blog
 
+## 0.6.0
+
+### Minor Changes
+
+- upgrade deps ([e06cb14](https://github.com/ryanatkn/fuz_blog/commit/e06cb14))
+
+  - `@ryanatkn/fuz@0.116.0` from `0.115.0`
+  - `@ryanatkn/fuz_mastodon@0.21.0` from `0.20.0`
+  - `@ryanatkn/moss@0.9.0` from `0.8.0`
+
 ## 0.5.1
 
 ### Patch Changes
