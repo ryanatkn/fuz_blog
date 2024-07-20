@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
-	import type {Snippet} from 'svelte';
 	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 	import {DEV} from 'esm-env';
-	import {onMount} from 'svelte';
+	import type {Snippet} from 'svelte';
+
+	import {Mastodon_Cache, set_mastodon_cache} from '$routes/blog/Mastodon_Cache.svelte.js';
 
 	interface Props {
 		children: Snippet;
@@ -11,20 +12,20 @@
 
 	const {children}: Props = $props();
 
-	// TODO BLOCK use a cache helper?
-	let cache: Fetch_Value_Cache | undefined | null = $state();
-
-	onMount(async () => {
-		if (DEV) {
-			cache = new Map((await import('./mastodon_dev_cache_data.js')).mastodon_dev_cache_data);
-			// To get the latest cache data, run this in the console: (and disable the `reply_filter` if you want all the data)
-			// cache = new Map();
-			// window.cache = cache;
-			// setTimeout(() => navigator.clipboard.writeText(JSON.stringify(Array.from(cache.entries()))), 500)
-		} else {
-			cache = null;
-		}
-	});
+	// TODO BLOCK ensure this is stripped in prod, including the cache data module
+	if (DEV) {
+		set_mastodon_cache(
+			new Mastodon_Cache(
+				async () => (await import('./mastodon_dev_cache_data.js')).mastodon_dev_cache_data,
+			),
+		);
+		// To get the latest cache data, add these lines:
+		// const cache = set_mastodon_cache(...);
+		// if (typeof window !== 'undefined') window.cache = cache;
+		// Then run this in the console and then click into the document to make the clipboard work: (and disable the `reply_filter` if you want all the data)
+		// setTimeout(() => navigator.clipboard.writeText(JSON.stringify(Array.from(cache.data.entries()))), 500)
+		// Then paste the string into the `mastodon_dev_cache_data.js` file as the exported `mastodon_dev_cache_data` value.
+	}
 
 	// TODO redirect from the numbers or render UI to navigate to it, maybe in `Blog_Post`
 </script>
