@@ -48,7 +48,7 @@
 							include_replies
 							initial_autoload
 							reply_filter={(item) => ({type: 'favourited_by', favourited_by: [item.account.acct]})}
-							storage_key="{item.id}_comments"
+							settings_storage_key="{item.id}_comments_settings"
 							cache={cache?.data}
 						/>
 					{/if}
