@@ -4,7 +4,7 @@
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
 
-	import {Mastodon_Cache, set_mastodon_cache} from '$routes/blog/Mastodon_Cache.svelte.js';
+	import {Mastodon_Cache, set_mastodon_cache} from '$routes/blog/mastodon_cache.svelte.js';
 
 	interface Props {
 		children: Snippet;
