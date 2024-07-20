@@ -2,6 +2,7 @@
 	import type {SvelteHTMLElements} from 'svelte/elements';
 	import type {Snippet} from 'svelte';
 	import Toot from '@ryanatkn/fuz_mastodon/Toot.svelte';
+	import {get_mastodon_cache} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
 	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
 	import {get_blog_feed, type Blog_Post_Data} from '$lib/blog.js';
@@ -20,6 +21,8 @@
 
 	// TODO maybe clean up the type vs `post`
 	const item = feed.items.find((i) => i.slug === post.slug);
+
+	const cache = get_mastodon_cache();
 </script>
 
 <svelte:head>
@@ -39,13 +42,16 @@
 				<!-- TODO use local cache in dev -->
 				<section>
 					<h2>Comments</h2>
-					<Toot
-						url={item.comments.url}
-						include_replies
-						initial_autoload
-						reply_filter={(item) => ({type: 'favourited_by', favourited_by: [item.account.acct]})}
-						storage_key="{item.id}_comments"
-					/>
+					{#if !cache || cache.data !== undefined}
+						<Toot
+							url={item.comments.url}
+							include_replies
+							initial_autoload
+							reply_filter={(item) => ({type: 'favourited_by', favourited_by: [item.account.acct]})}
+							settings_storage_key="{item.id}_comments_settings"
+							cache={cache?.data}
+						/>
+					{/if}
 				</section>
 				{@render separator()}
 			{/if}
