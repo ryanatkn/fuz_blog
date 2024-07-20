@@ -3,7 +3,10 @@
 	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
-	import {Mastodon_Cache, set_mastodon_cache} from '$routes/blog/mastodon_cache.svelte.js';
+	import {
+		Mastodon_Cache,
+		set_mastodon_cache,
+	} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
 	interface Props {
 		children: Snippet;
