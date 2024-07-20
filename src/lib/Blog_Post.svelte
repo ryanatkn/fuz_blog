@@ -5,7 +5,7 @@
 
 	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
 	import {get_blog_feed, type Blog_Post_Data} from '$lib/blog.js';
-	import {get_mastodon_cache} from '$routes/blog/Mastodon_Cache.svelte.js';
+	import {get_mastodon_cache} from '$routes/blog/mastodon_cache.svelte.js';
 
 	interface Props {
 		post: Blog_Post_Data;
