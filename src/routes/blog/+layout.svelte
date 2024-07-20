@@ -3,7 +3,6 @@
 	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
-
 	import {Mastodon_Cache, set_mastodon_cache} from '$routes/blog/mastodon_cache.svelte.js';
 
 	interface Props {
@@ -19,10 +18,10 @@
 			),
 		);
 		// To get the latest cache data, add these lines:
-		// const cache = set_mastodon_cache(...);
-		// if (typeof window !== 'undefined') window.cache = cache;
+		// 		const cache = set_mastodon_cache(...);
+		// 		if (typeof window !== 'undefined') window.cache = cache;
 		// Then run this in the console and then click into the document to make the clipboard work: (and disable the `reply_filter` if you want all the data)
-		// setTimeout(() => navigator.clipboard.writeText(JSON.stringify(Array.from(cache.data.entries()))), 500)
+		// 		setTimeout(() => navigator.clipboard.writeText(JSON.stringify(Array.from(cache.data.entries()))), 500)
 		// Then paste the string into the `mastodon_dev_cache_data.js` file as the exported `mastodon_dev_cache_data` value.
 	}
 
