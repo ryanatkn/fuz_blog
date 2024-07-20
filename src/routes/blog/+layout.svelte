@@ -12,7 +12,6 @@
 
 	const {children}: Props = $props();
 
-	// TODO BLOCK ensure this is stripped in prod, including the cache data module
 	if (DEV) {
 		set_mastodon_cache(
 			new Mastodon_Cache(
