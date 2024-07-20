@@ -43,7 +43,7 @@
 						url={item.comments.url}
 						include_replies
 						initial_autoload
-						reply_filters={(item) => [{type: 'favourited_by', favourited_by: [item.account.acct]}]}
+						reply_filter={(item) => ({type: 'favourited_by', favourited_by: [item.account.acct]})}
 						storage_key="{item.id}_comments"
 					/>
 				</section>

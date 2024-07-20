@@ -2,12 +2,29 @@
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
 	import type {Snippet} from 'svelte';
 	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
+	import {DEV} from 'esm-env';
+	import {onMount} from 'svelte';
 
 	interface Props {
 		children: Snippet;
 	}
 
 	const {children}: Props = $props();
+
+	// TODO BLOCK use a cache helper?
+	let cache: Fetch_Value_Cache | undefined | null = $state();
+
+	onMount(async () => {
+		if (DEV) {
+			cache = new Map((await import('./mastodon_dev_cache_data.js')).mastodon_dev_cache_data);
+			// To get the latest cache data, run this in the console: (and disable the `reply_filter` if you want all the data)
+			// cache = new Map();
+			// window.cache = cache;
+			// setTimeout(() => navigator.clipboard.writeText(JSON.stringify(Array.from(cache.entries()))), 500)
+		} else {
+			cache = null;
+		}
+	});
 
 	// TODO redirect from the numbers or render UI to navigate to it, maybe in `Blog_Post`
 </script>
