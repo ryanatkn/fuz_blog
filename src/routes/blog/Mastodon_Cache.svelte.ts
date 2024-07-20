@@ -4,7 +4,6 @@ import {getContext, onMount, setContext} from 'svelte';
 
 // TODO BLOCK upstream
 
-// TODO make more generic?
 export class Mastodon_Cache {
 	/**
 	 * If `undefined`, it's still loading.
