@@ -2,10 +2,10 @@
 	import type {SvelteHTMLElements} from 'svelte/elements';
 	import type {Snippet} from 'svelte';
 	import Toot from '@ryanatkn/fuz_mastodon/Toot.svelte';
+	import {get_mastodon_cache} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
 	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
 	import {get_blog_feed, type Blog_Post_Data} from '$lib/blog.js';
-	import {get_mastodon_cache} from '$routes/blog/mastodon_cache.svelte.js';
 
 	interface Props {
 		post: Blog_Post_Data;
