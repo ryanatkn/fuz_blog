@@ -1,5 +1,12 @@
 # @ryanatkn/fuz_blog
 
+## 0.7.0
+
+### Minor Changes
+
+- cache Mastodon data in dev ([#7](https://github.com/ryanatkn/fuz_blog/pull/7)) ([713d598](https://github.com/ryanatkn/fuz_blog/commit/713d598))
+- loosen peer deps temporarily ([367a921](https://github.com/ryanatkn/fuz_blog/commit/367a921))
+
 ## 0.6.0
 
 ### Minor Changes
