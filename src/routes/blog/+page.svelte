@@ -48,7 +48,11 @@
 		margin-top: var(--space_sm);
 		padding: var(--space_md);
 		/* TODO review this pattern, maybe use elsewhere */
-		box-shadow: var(--card_shadow, var(--shadow_sm) var(--shadow_color_2));
+		box-shadow: var(
+			--card_shadow,
+			var(--shadow_bottom_sm)
+				color-mix(in hsl, var(--shadow_color) var(--shadow_alpha_2), transparent)
+		);
 	}
 	.date {
 		font-size: var(--size_md);

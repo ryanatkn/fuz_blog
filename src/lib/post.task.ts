@@ -49,7 +49,7 @@ export const task: Task<Args> = {
 		const next_blog_post_path = join(blog_dir, next_blog_post_id + '/+page.svelte');
 
 		const unformatted = `
-			<script lang="ts" context="module">
+			<script lang="ts" module>
 				import type {Blog_Post_Data} from '${fuz_blog_import_path}/blog.js';
 
 				export const post = {
