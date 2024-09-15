@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.8.0
+
+### Minor Changes
+
+- bump required node version to `20.17` ([48b4dce](https://github.com/ryanatkn/fuz_blog/commit/48b4dce))
+
 ## 0.7.0
 
 ### Minor Changes
