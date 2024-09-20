@@ -35,7 +35,7 @@
 		<article {...attrs}>
 			<Blog_Post_Header {item} />
 			{@render children()}
-			{#if footer}{@render footer()}{/if}
+			{@render footer?.()}
 			{#if item.comments}
 				{@render separator()}
 				<!-- TODO the storage key is weird -->
