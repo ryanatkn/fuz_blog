@@ -31,7 +31,7 @@ export const package_json = {
 		'@ryanatkn/gro': '*',
 		'@ryanatkn/moss': '*',
 		'@sveltejs/kit': '^2',
-		'date-fns': '^4.1.0',
+		'date-fns': '^4',
 		svelte: '^5.0.0-next.0',
 	},
 	devDependencies: {
