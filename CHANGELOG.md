@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.9.0
+
+### Minor Changes
+
+- upgrade date-fns ([2795bc9](https://github.com/ryanatkn/fuz_blog/commit/2795bc9))
+
 ## 0.8.0
 
 ### Minor Changes
