@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "blog software from scratch with SvelteKit",
   "glyph": "🖊️",
   "logo": "logo.svg",
@@ -28,7 +28,7 @@
     "@ryanatkn/gro": "*",
     "@ryanatkn/moss": "*",
     "@sveltejs/kit": "^2",
-    "date-fns": "^4.1.0",
+    "date-fns": "^4",
     "svelte": "^5.0.0-next.0"
   },
   "devDependencies": {
