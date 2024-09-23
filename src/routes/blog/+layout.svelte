@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
-	import Fuz_Logo from '@ryanatkn/fuz/Fuz_Logo.svelte';
+	import Svg from '@ryanatkn/fuz/Svg.svelte';
+	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
 	import {
@@ -32,13 +33,13 @@
 </script>
 
 <div class="breadcrumbs">
-	<Breadcrumb><Fuz_Logo project="fuz_blog" size="var(--size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--size_xl)" /></Breadcrumb>
 </div>
 <div class="wrapper">
 	{@render children()}
 </div>
 <div class="breadcrumbs mb_xl9">
-	<Breadcrumb><Fuz_Logo project="fuz_blog" size="var(--size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--size_xl)" /></Breadcrumb>
 </div>
 
 <!-- TODO 404, needs to work with prerendering -->
