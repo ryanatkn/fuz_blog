@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.10.0
+
+### Minor Changes
+
+- update to use `create_context` helper ([4269430](https://github.com/ryanatkn/fuz_blog/commit/4269430))
+
 ## 0.9.0
 
 ### Minor Changes
