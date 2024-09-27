@@ -1,6 +1,6 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "modules": {
     "./package.json": {
       "path": "package.json",
@@ -88,12 +88,8 @@
           "kind": "type"
         },
         {
-          "name": "get_blog_feed",
-          "kind": "function"
-        },
-        {
-          "name": "set_blog_feed",
-          "kind": "function"
+          "name": "blog_feed_context",
+          "kind": "variable"
         }
       ]
     },
