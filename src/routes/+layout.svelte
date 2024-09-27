@@ -11,7 +11,7 @@
 	import type {Snippet} from 'svelte';
 
 	import Settings from '$routes/Settings.svelte';
-	import {set_blog_feed} from '$lib/blog.js';
+	import {blog_feed_context} from '$lib/blog.js';
 	import {feed} from '$routes/blog/feed.js';
 
 	interface Props {
@@ -20,7 +20,7 @@
 
 	const {children}: Props = $props();
 
-	set_blog_feed(feed);
+	blog_feed_context.set(feed);
 
 	let show_settings = $state(false);
 </script>

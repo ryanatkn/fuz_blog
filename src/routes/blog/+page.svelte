@@ -2,10 +2,10 @@
 	import {base} from '$app/paths';
 
 	import Feed_Item_Date from '$lib/Feed_Item_Date.svelte';
-	import {get_blog_feed} from '$lib/blog.js';
+	import {blog_feed_context} from '$lib/blog.js';
 	import {to_pathname} from '$lib/util.js';
 
-	const feed = get_blog_feed();
+	const feed = blog_feed_context.get();
 
 	const items = feed.items.slice().reverse();
 </script>

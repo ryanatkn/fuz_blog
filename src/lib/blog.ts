@@ -1,7 +1,8 @@
-import {type Component, getContext, setContext} from 'svelte';
+import type {Component} from 'svelte';
 import type {Flavored, Omit_Strict} from '@ryanatkn/belt/types.js';
 
 import type {Feed} from '$lib/feed.js';
+import {create_context} from '@ryanatkn/fuz/context_helpers.js';
 
 // TODO inconsistent naming with `Blog_Post_Data` and `Blog_Post_Item`,
 // consider `BlogItem` or `Blog_Feed_Item`?
@@ -64,8 +65,4 @@ export interface Blog_Post_Item extends Blog_Post_Data {
 	tags: string[]; // required
 }
 
-const KEY = Symbol('blog_feed');
-
-export const get_blog_feed = (): Blog_Feed => getContext(KEY);
-
-export const set_blog_feed = (feed: Blog_Feed): Blog_Feed => setContext(KEY, feed);
+export const blog_feed_context = create_context<Blog_Feed>();

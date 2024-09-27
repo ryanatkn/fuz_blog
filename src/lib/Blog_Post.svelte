@@ -2,10 +2,10 @@
 	import type {SvelteHTMLElements} from 'svelte/elements';
 	import type {Snippet} from 'svelte';
 	import Toot from '@ryanatkn/fuz_mastodon/Toot.svelte';
-	import {get_mastodon_cache} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
+	import {mastodon_cache_context} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
 	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
-	import {get_blog_feed, type Blog_Post_Data} from '$lib/blog.js';
+	import {blog_feed_context, type Blog_Post_Data} from '$lib/blog.js';
 
 	interface Props {
 		post: Blog_Post_Data;
@@ -17,12 +17,12 @@
 
 	const {post, attrs, footer, separator = default_separator, children}: Props = $props();
 
-	const feed = get_blog_feed();
+	const feed = blog_feed_context.get();
 
 	// TODO maybe clean up the type vs `post`
 	const item = feed.items.find((i) => i.slug === post.slug);
 
-	const cache = get_mastodon_cache();
+	const cache = mastodon_cache_context.get();
 </script>
 
 <svelte:head>
