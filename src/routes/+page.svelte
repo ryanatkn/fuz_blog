@@ -4,8 +4,6 @@
 	import Svg from '@ryanatkn/fuz/Svg.svelte';
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
 	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
-	// TODO @many why is this import needed? `Code` already imports it. Fails in dev with SSR enabled without it. Is there a Vite config option that would be better? I tried the combinations of `ssr.external/noExternal/external` with `@ryanatkn/fuz_code` and `prismjs`.
-	import 'prismjs';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
 
