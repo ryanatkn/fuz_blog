@@ -11,7 +11,7 @@ import {create_context} from '@ryanatkn/fuz/context_helpers.js';
 export type Blog_Feed_Data = Omit_Strict<Feed, 'items'>;
 
 export interface Blog_Feed extends Feed {
-	items: Blog_Post_Item[];
+	items: Array<Blog_Post_Item>;
 }
 
 /**
@@ -23,7 +23,7 @@ export interface Blog_Post_Data {
 	date_published: string; // TODO maybe calculated instead of manually defined?
 	date_modified: string; // TODO maybe calculated instead of manually defined?
 	summary: string;
-	tags?: string[];
+	tags?: Array<string>;
 	comments?: Blog_Comments;
 }
 
@@ -62,7 +62,7 @@ export interface Blog_Post_Item extends Blog_Post_Data {
 	 */
 	blog_post_id: Blog_Post_Id; // TODO maybe random?
 
-	tags: string[]; // required
+	tags: Array<string>; // required
 }
 
 export const blog_feed_context = create_context<Blog_Feed>();

@@ -24,7 +24,7 @@ export interface Feed {
 		email?: string;
 	};
 	// TODO date_modified for entire feed?
-	items: Feed_Item[];
+	items: Array<Feed_Item>;
 	atom: {
 		feed_url: string;
 	};
@@ -51,7 +51,7 @@ export interface Feed_Item {
 	// content_html: string;
 	// image?: string;
 	// external_url?: string;
-	tags?: string[];
+	tags?: Array<string>;
 }
 
 export const create_atom_feed = (data: Feed): string => {
