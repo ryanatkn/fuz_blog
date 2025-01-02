@@ -1,0 +1,1 @@
+import{c as t,l as e,u,a as c}from"./runtime.CxMoHi5K.js";function f(n){t===null&&e(),u(()=>{const o=c(n);if(typeof o=="function")return o})}function s(n){t===null&&e(),f(()=>()=>c(n))}export{s as a,f as o};
