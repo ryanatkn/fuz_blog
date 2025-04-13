@@ -8,7 +8,9 @@
 
 [npm](https://www.npmjs.com/package/@ryanatkn/fuz_blog):
 
-> npm i @ryanatkn/fuz_blog
+```bash
+npm i @ryanatkn/fuz_blog
+```
 
 ## License [🐦](https://wikipedia.org/wiki/Free_and_open-source_software)
 
