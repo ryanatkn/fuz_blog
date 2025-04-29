@@ -9,7 +9,7 @@
 		summary: 'fuz_blog is now a reusable library',
 		tags: ['blog software', 'sveltekit'],
 		comments: {
-			url: 'https://mastodon.social/@webdevladder/112791910038764650',
+			url: 'https://fosstodon.org/@ryanatkn/114422499177310600',
 			type: 'mastodon',
 		},
 	} satisfies Blog_Post_Data;
@@ -30,14 +30,13 @@
 			The source code is <a href="https://github.com/ryanatkn/fuz_blog">here on GitHub</a>.
 		</p>
 		<p>
-			To watch the process of me creating this project (where the first part unfortunately has my
-			giant head obscuring parts of the screen, but I fix it later!), visit TODO. The code is at <a
-				href="https://github.com/ryanatkn/fuz_blog/pull/1">PR #1</a
-			>.
+			To watch me create this project from an older messier codebase, see this <a
+				href="https://www.youtube.com/watch?v=j1qTO5xolC4&list=PLio_5jgyVNVm0nMXojbEP7vQOEakA8n4X&index=1"
+				>video and playlist</a
+			>. The code is at <a href="https://github.com/ryanatkn/fuz_blog/pull/1">PR #1</a>.
 		</p>
 	</section>
 	{#snippet footer()}
-		<hr />
 		<Blog_Post_Footer />
 	{/snippet}
 </Blog_Post>
