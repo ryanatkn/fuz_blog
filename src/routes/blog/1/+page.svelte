@@ -9,7 +9,7 @@
 		summary: 'fuz_blog is now a reusable library',
 		tags: ['blog software', 'sveltekit'],
 		comments: {
-			url: 'https://fosstodon.org/@ryanatkn/113510864332714371',
+			url: 'https://fosstodon.org/@ryanatkn/114422499177310600',
 			type: 'mastodon',
 		},
 	} satisfies Blog_Post_Data;
