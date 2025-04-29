@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Package_Detail from '@ryanatkn/fuz/Package_Detail.svelte';
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
-	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
+	import Docs_Footer from '@ryanatkn/fuz/Docs_Footer.svelte';
 	import Community_Links_Panel from '@ryanatkn/fuz/Community_Links_Panel.svelte';
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
 
@@ -26,11 +26,11 @@
 		</div>
 	</section>
 	<section class="box">
-		<Library_Footer {pkg} root_url="https://www.fuz.dev/">
+		<Docs_Footer {pkg} root_url="https://www.fuz.dev/">
 			<div class="mb_xl3">
 				<Breadcrumb>{package_json.glyph}</Breadcrumb>
 			</div>
-		</Library_Footer>
+		</Docs_Footer>
 	</section>
 </main>
 
