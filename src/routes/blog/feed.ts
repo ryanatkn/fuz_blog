@@ -22,7 +22,7 @@ export const feed: Blog_Feed = {
 			date_modified: '2024-07-15T18:27:36.477Z',
 			summary: 'fuz_blog is now a reusable library',
 			tags: ['blog software', 'sveltekit'],
-			comments: {url: 'https://fosstodon.org/@webdevladder/112791910038764650', type: 'mastodon'},
+			comments: {url: 'https://fosstodon.org/@ryanatkn/113510864332714371', type: 'mastodon'},
 		},
 	],
 };

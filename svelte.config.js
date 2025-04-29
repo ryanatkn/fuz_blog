@@ -16,7 +16,8 @@ export default {
 			directives: create_csp_directives({
 				trusted_sources: csp_trusted_sources_of_ryanatkn.concat([
 					// These enable Mastodon comments for my account at https://hci.social/@ryanatkn
-					{source: 'https://*.fosstodon.org/', trust: 'low', directives: ['connect-src']},
+					{source: 'https://fosstodon.org/', trust: 'low', directives: ['connect-src']},
+					{source: 'https://*.fosstodon.org/', trust: 'low'},
 				]),
 			}),
 		},
