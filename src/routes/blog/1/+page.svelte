@@ -37,7 +37,6 @@
 		</p>
 	</section>
 	{#snippet footer()}
-		<hr />
 		<Blog_Post_Footer />
 	{/snippet}
 </Blog_Post>
