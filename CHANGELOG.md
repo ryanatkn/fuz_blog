@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.13.0
+
+### Minor Changes
+
+- upgrade deps ([cace7c5](https://github.com/ryanatkn/fuz_blog/commit/cace7c5))
+
 ## 0.12.0
 
 ### Minor Changes
