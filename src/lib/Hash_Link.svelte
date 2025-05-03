@@ -27,7 +27,7 @@
 		position: absolute;
 		left: calc(var(--icon_size, var(--icon_size_md)) * -1 - var(--space_xl));
 		opacity: 0;
-		font-size: var(--size_lg);
+		font-size: var(--font_size_lg);
 		display: flex;
 		align-items: center;
 		justify-content: center;

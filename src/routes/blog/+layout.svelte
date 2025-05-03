@@ -42,13 +42,13 @@
 </script>
 
 <div class="breadcrumbs">
-	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--font_size_xl)" /></Breadcrumb>
 </div>
 <div class="wrapper">
 	{@render children()}
 </div>
 <div class="breadcrumbs mb_xl9">
-	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--font_size_xl)" /></Breadcrumb>
 </div>
 
 <!-- TODO 404, needs to work with prerendering -->
