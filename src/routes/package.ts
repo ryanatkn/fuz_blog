@@ -23,7 +23,7 @@ export const package_json = {
 		deploy: 'gro deploy',
 	},
 	type: 'module',
-	engines: {node: '>=22.11'},
+	engines: {node: '>=22.15'},
 	peerDependencies: {
 		'@ryanatkn/belt': '*',
 		'@ryanatkn/fuz': '*',
@@ -41,7 +41,7 @@ export const package_json = {
 		'@ryanatkn/fuz': '^0.141.1',
 		'@ryanatkn/fuz_code': '^0.23.0',
 		'@ryanatkn/fuz_mastodon': '^0.30.0',
-		'@ryanatkn/gro': '^0.154.0',
+		'@ryanatkn/gro': '^0.156.0',
 		'@ryanatkn/moss': '^0.28.0',
 		'@sveltejs/adapter-static': '^3.0.8',
 		'@sveltejs/kit': '^2.20.8',
