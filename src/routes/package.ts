@@ -38,11 +38,11 @@ export const package_json = {
 		'@changesets/changelog-git': '^0.2.1',
 		'@ryanatkn/belt': '^0.30.2',
 		'@ryanatkn/eslint-config': '^0.8.0',
-		'@ryanatkn/fuz': '^0.141.1',
+		'@ryanatkn/fuz': '^0.143.0',
 		'@ryanatkn/fuz_code': '^0.23.0',
 		'@ryanatkn/fuz_mastodon': '^0.30.0',
-		'@ryanatkn/gro': '^0.156.0',
-		'@ryanatkn/moss': '^0.28.0',
+		'@ryanatkn/gro': '^0.158.0',
+		'@ryanatkn/moss': '^0.29.0',
 		'@sveltejs/adapter-static': '^3.0.8',
 		'@sveltejs/kit': '^2.20.8',
 		'@sveltejs/package': '^2.3.11',
@@ -109,7 +109,7 @@ export const src_json = {
 	name: '@ryanatkn/fuz_blog',
 	version: '0.13.0',
 	modules: {
-		'./package.json': {path: 'package.json', declarations: []},
+		'./package.json': {path: 'package.json', declarations: [{name: 'default', kind: 'json'}]},
 		'./blog_helpers.js': {
 			path: 'blog_helpers.ts',
 			declarations: [
@@ -120,9 +120,15 @@ export const src_json = {
 				{name: 'to_blog_post_path', kind: 'function'},
 			],
 		},
-		'./Blog_Post_Header.svelte': {path: 'Blog_Post_Header.svelte', declarations: []},
-		'./Blog_Post.svelte': {path: 'Blog_Post.svelte', declarations: []},
-		'./blog.gen.js': {path: 'blog.gen.ts', declarations: [{name: 'gen', kind: 'variable'}]},
+		'./Blog_Post_Header.svelte': {
+			path: 'Blog_Post_Header.svelte',
+			declarations: [{name: 'default', kind: 'component'}],
+		},
+		'./Blog_Post.svelte': {
+			path: 'Blog_Post.svelte',
+			declarations: [{name: 'default', kind: 'component'}],
+		},
+		'./blog.gen.js': {path: 'blog.gen.ts', declarations: [{name: 'gen', kind: 'function'}]},
 		'./blog.js': {
 			path: 'blog.ts',
 			declarations: [
@@ -138,7 +144,10 @@ export const src_json = {
 				{name: 'blog_feed_context', kind: 'variable'},
 			],
 		},
-		'./Feed_Item_Date.svelte': {path: 'Feed_Item_Date.svelte', declarations: []},
+		'./Feed_Item_Date.svelte': {
+			path: 'Feed_Item_Date.svelte',
+			declarations: [{name: 'default', kind: 'component'}],
+		},
 		'./feed.js': {
 			path: 'feed.ts',
 			declarations: [
@@ -147,7 +156,10 @@ export const src_json = {
 				{name: 'create_atom_feed', kind: 'function'},
 			],
 		},
-		'./Hash_Link.svelte': {path: 'Hash_Link.svelte', declarations: []},
+		'./Hash_Link.svelte': {
+			path: 'Hash_Link.svelte',
+			declarations: [{name: 'default', kind: 'component'}],
+		},
 		'./post.task.js': {path: 'post.task.ts', declarations: [{name: 'task', kind: 'variable'}]},
 		'./update_post.task.js': {
 			path: 'update_post.task.ts',
