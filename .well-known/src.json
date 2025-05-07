@@ -4,7 +4,12 @@
   "modules": {
     "./package.json": {
       "path": "package.json",
-      "declarations": []
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "json"
+        }
+      ]
     },
     "./blog_helpers.js": {
       "path": "blog_helpers.ts",
@@ -33,18 +38,28 @@
     },
     "./Blog_Post_Header.svelte": {
       "path": "Blog_Post_Header.svelte",
-      "declarations": []
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
     },
     "./Blog_Post.svelte": {
       "path": "Blog_Post.svelte",
-      "declarations": []
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
     },
     "./blog.gen.js": {
       "path": "blog.gen.ts",
       "declarations": [
         {
           "name": "gen",
-          "kind": "variable"
+          "kind": "function"
         }
       ]
     },
@@ -95,7 +110,12 @@
     },
     "./Feed_Item_Date.svelte": {
       "path": "Feed_Item_Date.svelte",
-      "declarations": []
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
     },
     "./feed.js": {
       "path": "feed.ts",
@@ -116,7 +136,12 @@
     },
     "./Hash_Link.svelte": {
       "path": "Hash_Link.svelte",
-      "declarations": []
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
     },
     "./post.task.js": {
       "path": "post.task.ts",
