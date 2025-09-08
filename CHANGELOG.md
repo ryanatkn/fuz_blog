@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.14.0
+
+### Minor Changes
+
+- bump node@22.15 from 22.11 ([d67ccec](https://github.com/ryanatkn/fuz_blog/commit/d67ccec))
+
 ## 0.13.0
 
 ### Minor Changes
@@ -48,7 +54,6 @@
 ### Minor Changes
 
 - upgrade deps ([e06cb14](https://github.com/ryanatkn/fuz_blog/commit/e06cb14))
-
   - `@ryanatkn/fuz@0.116.0` from `0.115.0`
   - `@ryanatkn/fuz_mastodon@0.21.0` from `0.20.0`
   - `@ryanatkn/moss@0.9.0` from `0.8.0`
@@ -83,7 +88,6 @@
 
 - add `gro post` title support ([#4](https://github.com/ryanatkn/fuz_blog/pull/4), [067f9b0](https://github.com/ryanatkn/fuz_blog/commit/067f9b007900a57487d02f43b96231f2ae039ddb))
 - update blog post footer ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
-
   - unpublish `Blog_Post_Footer`
   - add `footer` snippet prop to `Blog_Post`
 
