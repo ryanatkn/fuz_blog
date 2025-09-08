@@ -10,8 +10,8 @@ import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js'
 
 const Args = z
 	.object({
-		_: z.array(z.string(), {description: 'post title'}).default([]),
-		date: z.string({description: "the post's date_published"}).optional(),
+		_: z.array(z.string()).meta({description: 'post title'}).max(1).default([]),
+		date: z.string().meta({description: "the post's date_published"}).optional(),
 	})
 	.strict();
 type Args = z.infer<typeof Args>;

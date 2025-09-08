@@ -5,8 +5,8 @@ import {z} from 'zod';
 const Args = z
 	.object({
 		// TODO accept `slug` as well as `id` ?
-		_: z.array(z.string(), {description: 'id of the post to update'}).default([]),
-		date: z.string({description: "the post's date_modified"}).optional(),
+		_: z.array(z.string()).meta({description: 'id of the post to update'}).max(1).default([]),
+		date: z.string().meta({description: "the post's date_modified"}).optional(),
 	})
 	.strict();
 type Args = z.infer<typeof Args>;
