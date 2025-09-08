@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {asset} from '$app/paths';
+	import {asset, resolve} from '$app/paths';
 
 	import Feed_Item_Date from '$lib/Feed_Item_Date.svelte';
 	import {blog_feed_context} from '$lib/blog.js';
@@ -14,8 +14,7 @@
 	<ol class="panel" reversed>
 		{#each items as item (item)}
 			<li class="blog_card">
-				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-				<a href={to_pathname(item.url, feed.home_page_url)}>{item.title}</a>
+				<a href={resolve(to_pathname(item.url, feed.home_page_url) as any)}>{item.title}</a>
 				<div class="date"><Feed_Item_Date {item} /></div>
 			</li>
 		{:else}
