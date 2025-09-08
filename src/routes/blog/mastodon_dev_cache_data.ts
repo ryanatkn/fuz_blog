@@ -7,6 +7,7 @@ export const mastodon_dev_cache_data: Array<[Url, Fetch_Value_Cache_Item]> = [
 		{
 			key: 'GET::https://fosstodon.org/api/v1/statuses/113510864332714371',
 			url: 'https://fosstodon.org/api/v1/statuses/113510864332714371',
+			params: null,
 			value: {
 				id: '113510864332714371',
 				created_at: '2024-11-19T17:45:35.153Z',
@@ -98,6 +99,7 @@ export const mastodon_dev_cache_data: Array<[Url, Fetch_Value_Cache_Item]> = [
 		{
 			key: 'GET::https://fosstodon.org/api/v1/statuses/113510864332714371/context',
 			url: 'https://fosstodon.org/api/v1/statuses/113510864332714371/context',
+			params: null,
 			value: {
 				ancestors: [],
 				descendants: [
@@ -195,6 +197,7 @@ export const mastodon_dev_cache_data: Array<[Url, Fetch_Value_Cache_Item]> = [
 		{
 			key: 'GET::https://fosstodon.org/api/v1/statuses/114422499177310600',
 			url: 'https://fosstodon.org/api/v1/statuses/114422499177310600',
+			params: null,
 			value: {
 				id: '114422499177310600',
 				created_at: '2025-04-29T17:46:18.949Z',
@@ -306,6 +309,7 @@ export const mastodon_dev_cache_data: Array<[Url, Fetch_Value_Cache_Item]> = [
 		{
 			key: 'GET::https://fosstodon.org/api/v1/statuses/114422499177310600/context',
 			url: 'https://fosstodon.org/api/v1/statuses/114422499177310600/context',
+			params: null,
 			value: {ancestors: [], descendants: []},
 			etag: null,
 			last_modified: null,
