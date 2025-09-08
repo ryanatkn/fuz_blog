@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {base} from '$app/paths';
+	import {resolve} from '$app/paths';
 	import Card from '@ryanatkn/fuz/Card.svelte';
 	import Svg from '@ryanatkn/fuz/Svg.svelte';
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
@@ -23,7 +23,7 @@
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
 	</section>
 	<section class="box">
-		<Card href="{base}/blog" icon="🖊️">blog</Card>
+		<Card href={resolve('/blog')} icon="🖊️">blog</Card>
 	</section>
 	<section>
 		<h2>Docs</h2>
@@ -66,7 +66,7 @@ $ gro update_post --help`}
 		/>
 	</section>
 	<section class="mb_xl5 box">
-		<a class="chip mb_xl3" href="{base}/about">about</a>
+		<a class="chip mb_xl3" href={resolve('/about')}>about</a>
 		<Docs_Footer {pkg} root_url="https://www.fuz.dev/" />
 	</section>
 </main>
