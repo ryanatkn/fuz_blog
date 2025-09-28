@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.15.0
+
+### Minor Changes
+
+- upgrade @ryanatkn/moss@0.36 ([6d3d94c](https://github.com/ryanatkn/fuz_blog/commit/6d3d94c))
+
 ## 0.14.0
 
 ### Minor Changes
