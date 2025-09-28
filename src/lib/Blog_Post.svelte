@@ -30,7 +30,7 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<div class="blog_post width_md">
+<div class="blog_post width_upto_md">
 	{#if item}
 		<article {...attrs}>
 			<Blog_Post_Header {item} />

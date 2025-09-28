@@ -14,7 +14,7 @@
 	/* eslint-disable @typescript-eslint/no-unnecessary-template-expression */
 </script>
 
-<main class="mx_auto p_lg width_md">
+<main class="mx_auto p_lg width_upto_md">
 	<section class="box">
 		<header class="pt_sm">
 			<Svg data={fuz_blog_logo} size="var(--icon_size_xl3)" />
