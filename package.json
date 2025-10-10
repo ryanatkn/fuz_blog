@@ -86,6 +86,10 @@
       "types": "./dist/*.d.ts",
       "default": "./dist/*.js"
     },
+    "./*.ts": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
     "./*.svelte": {
       "types": "./dist/*.svelte.d.ts",
       "svelte": "./dist/*.svelte",
