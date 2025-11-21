@@ -26,7 +26,7 @@ export const task: Task<Args> = {
 		} = args;
 
 		if (!raw_title) {
-			throw new Task_Error('post title is required');
+			throw new Task_Error('post title is required, e.g. `gro post "Hello world"`');
 		}
 		const title = raw_title.trim();
 		const slug = slugify(title);
