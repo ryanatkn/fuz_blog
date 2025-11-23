@@ -5,11 +5,11 @@
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
 	import Docs_Footer from '@ryanatkn/fuz/Docs_Footer.svelte';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
-	import {parse_pkg} from '@ryanatkn/belt/pkg.js';
+	import {Pkg} from '@ryanatkn/fuz/pkg.svelte.js';
 
 	import {package_json, src_json} from '$routes/package.js';
 
-	const pkg = parse_pkg(package_json, src_json);
+	const pkg = new Pkg(package_json, src_json);
 
 	/* eslint-disable @typescript-eslint/no-unnecessary-template-expression */
 </script>
