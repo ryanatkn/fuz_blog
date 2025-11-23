@@ -221,6 +221,9 @@ a.chip {
 .pb_md {
 	padding-bottom: var(--space_md);
 }
+.mt_0 {
+	margin-top: 0;
+}
 .mt_xl2 {
 	margin-top: var(--space_xl2);
 }

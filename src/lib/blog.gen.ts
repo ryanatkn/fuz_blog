@@ -10,6 +10,7 @@ import {
 } from '$lib/blog_helpers.js';
 import type {Blog_Feed, Blog_Module} from '$lib/blog.js';
 
+/** @nodocs */
 export const gen: Gen = async ({origin_path}) => {
 	// TODO @many parameterize and refactor
 
