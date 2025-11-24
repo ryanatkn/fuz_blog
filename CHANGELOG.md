@@ -1,5 +1,12 @@
 # @ryanatkn/fuz_blog
 
+## 0.16.0
+
+### Minor Changes
+
+- update peer deps ([f5a6ec3](https://github.com/ryanatkn/fuz_blog/commit/f5a6ec3))
+- upgrade deps ([#11](https://github.com/ryanatkn/fuz_blog/pull/11))
+
 ## 0.15.0
 
 ### Minor Changes
