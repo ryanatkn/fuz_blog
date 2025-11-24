@@ -5,11 +5,9 @@
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
 	import Docs_Footer from '@ryanatkn/fuz/Docs_Footer.svelte';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
-	import {Pkg} from '@ryanatkn/fuz/pkg.svelte.js';
+	import {pkg_context} from '@ryanatkn/fuz/pkg.svelte.js';
 
-	import {package_json, src_json} from '$routes/package.js';
-
-	const pkg = new Pkg(package_json, src_json);
+	const pkg = pkg_context.get();
 
 	/* eslint-disable @typescript-eslint/no-unnecessary-template-expression */
 </script>
@@ -23,11 +21,12 @@
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
 	</section>
 	<section class="box">
-		<Card href={resolve('/blog')} icon="🖊️">blog</Card>
+		<div class="mb_lg">
+			<Card href={resolve('/docs')}>docs{#snippet icon()}{pkg.package_json.glyph}{/snippet}</Card>
+		</div>
+		<Card href={resolve('/blog')} icon="🪧">blog</Card>
 	</section>
 	<section>
-		<h2>Docs</h2>
-		<aside>⚠️ Docs are a work in progress!</aside>
 		<p>
 			To enable your generated <code>feed.xml</code>, include it as a <code>link</code> in your layout:
 		</p>
