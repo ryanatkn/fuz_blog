@@ -23,8 +23,7 @@
 
 	const {children}: Props = $props();
 
-	const pkg = new Pkg(package_json, src_json);
-	pkg_context.set(pkg);
+	pkg_context.set(new Pkg(package_json, src_json));
 
 	blog_feed_context.set(feed);
 
