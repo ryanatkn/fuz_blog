@@ -22,7 +22,7 @@
 	// TODO maybe clean up the type vs `post`
 	const item = feed.items.find((i) => i.slug === post.slug);
 
-	const cache = mastodon_cache_context.maybe_get();
+	const cache = mastodon_cache_context.get_maybe();
 </script>
 
 <svelte:head>
