@@ -1,8 +1,8 @@
 import type {Component} from 'svelte';
 import type {Flavored, Omit_Strict} from '@ryanatkn/belt/types.js';
-
-import type {Feed} from '$lib/feed.js';
 import {create_context} from '@ryanatkn/fuz/context_helpers.js';
+
+import type {Feed} from './feed.js';
 
 // TODO inconsistent naming with `Blog_Post_Data` and `Blog_Post_Item`,
 // consider `BlogItem` or `Blog_Feed_Item`?

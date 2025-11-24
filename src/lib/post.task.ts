@@ -6,7 +6,7 @@ import {dirname, join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
 import {slugify} from '@ryanatkn/belt/path.js';
 
-import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
+import {collect_blog_post_ids, to_next_blog_post_id} from './blog_helpers.js';
 
 /** @nodocs */
 export const Args = z

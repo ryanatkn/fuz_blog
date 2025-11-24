@@ -4,8 +4,8 @@
 	import Toot from '@ryanatkn/fuz_mastodon/Toot.svelte';
 	import {mastodon_cache_context} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
-	import Blog_Post_Header from '$lib/Blog_Post_Header.svelte';
-	import {blog_feed_context, type Blog_Post_Data} from '$lib/blog.js';
+	import Blog_Post_Header from './Blog_Post_Header.svelte';
+	import {blog_feed_context, type Blog_Post_Data} from './blog.js';
 
 	interface Props {
 		post: Blog_Post_Data;

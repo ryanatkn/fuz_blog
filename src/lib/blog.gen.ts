@@ -2,13 +2,13 @@ import type {Gen} from '@ryanatkn/gro/gen.js';
 import {join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
 
-import {create_atom_feed} from '$lib/feed.js';
+import {create_atom_feed} from './feed.js';
 import {
 	collect_blog_post_ids,
 	load_blog_post_modules,
 	resolve_blog_post_item,
-} from '$lib/blog_helpers.js';
-import type {Blog_Feed, Blog_Module} from '$lib/blog.js';
+} from './blog_helpers.js';
+import type {Blog_Feed, Blog_Module} from './blog.js';
 
 /** @nodocs */
 export const gen: Gen = async ({origin_path}) => {
@@ -16,7 +16,7 @@ export const gen: Gen = async ({origin_path}) => {
 
 	const package_json = load_package_json();
 	const fuz_blog_import_path =
-		package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
+		package_json.name === '@ryanatkn/fuz_blog' ? '.' : '@ryanatkn/fuz_blog';
 
 	const dir = process.cwd();
 	const blog_dirname = 'blog';
