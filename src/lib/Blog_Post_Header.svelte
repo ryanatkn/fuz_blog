@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Feed_Item_Date from '$lib/Feed_Item_Date.svelte';
-	import type {Blog_Post_Item} from '$lib/blog.js';
+	import Feed_Item_Date from './Feed_Item_Date.svelte';
+	import type {Blog_Post_Item} from './blog.js';
 
 	interface Props {
 		item: Blog_Post_Item;

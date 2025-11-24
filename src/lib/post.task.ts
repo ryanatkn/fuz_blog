@@ -6,16 +6,18 @@ import {dirname, join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
 import {slugify} from '@ryanatkn/belt/path.js';
 
-import {collect_blog_post_ids, to_next_blog_post_id} from '$lib/blog_helpers.js';
+import {collect_blog_post_ids, to_next_blog_post_id} from './blog_helpers.js';
 
-const Args = z
+/** @nodocs */
+export const Args = z
 	.object({
 		_: z.array(z.string()).meta({description: 'post title'}).max(1).default([]),
 		date: z.string().meta({description: "the post's date_published"}).optional(),
 	})
 	.strict();
-type Args = z.infer<typeof Args>;
+export type Args = z.infer<typeof Args>;
 
+/** @nodocs */
 export const task: Task<Args> = {
 	summary: 'create a new blog post',
 	Args,

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type {Feed_Item} from '$lib/feed.js';
-	import {format_date} from '$lib/util.js';
+	import type {Feed_Item} from './feed.js';
+	import {format_date} from './util.js';
 
 	interface Props {
 		item: Feed_Item;

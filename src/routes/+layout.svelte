@@ -8,7 +8,7 @@
 	import Themed from '@ryanatkn/fuz/Themed.svelte';
 	import Dialog from '@ryanatkn/fuz/Dialog.svelte';
 	import Contextmenu_Root from '@ryanatkn/fuz/Contextmenu_Root.svelte';
-	import {contextmenu_action} from '@ryanatkn/fuz/contextmenu_state.svelte.js';
+	import {contextmenu_attachment} from '@ryanatkn/fuz/contextmenu_state.svelte.js';
 	import type {Snippet} from 'svelte';
 
 	import Settings from '$routes/Settings.svelte';
@@ -33,7 +33,7 @@
 </svelte:head>
 
 <svelte:body
-	use:contextmenu_action={[
+	{@attach contextmenu_attachment([
 		{
 			snippet: 'text',
 			props: {
@@ -54,7 +54,7 @@
 				},
 			},
 		},
-	]}
+	])}
 />
 
 <Themed>

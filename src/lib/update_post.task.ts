@@ -2,15 +2,17 @@ import {Task_Error, type Task} from '@ryanatkn/gro';
 import {existsSync, readFileSync, writeFileSync} from 'node:fs';
 import {z} from 'zod';
 
-const Args = z
+/** @nodocs */
+export const Args = z
 	.object({
 		// TODO accept `slug` as well as `id` ?
 		_: z.array(z.string()).meta({description: 'id of the post to update'}).max(1).default([]),
 		date: z.string().meta({description: "the post's date_modified"}).optional(),
 	})
 	.strict();
-type Args = z.infer<typeof Args>;
+export type Args = z.infer<typeof Args>;
 
+/** @nodocs */
 export const task: Task<Args> = {
 	summary: 'updates the `date_modified` of a blog post',
 	Args,

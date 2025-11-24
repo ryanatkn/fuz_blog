@@ -2,7 +2,7 @@ import {strip_end} from '@ryanatkn/belt/string.js';
 import {join} from 'node:path';
 import {existsSync} from 'node:fs';
 
-import type {Blog_Post_Id, Blog_Post_Data, Blog_Post_Item, Blog_Post_Module} from '$lib/blog.js';
+import type {Blog_Post_Id, Blog_Post_Data, Blog_Post_Item, Blog_Post_Module} from './blog.js';
 
 // TODO maybe move non-node stuff to `blog`, maybe rename this to `blog_fs_helpers`?
 
