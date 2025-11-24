@@ -21,8 +21,10 @@
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
 	</section>
 	<section class="box">
-		<Card href={resolve('/docs')}>docs{#snippet icon()}{pkg.package_json.glyph}{/snippet}</Card>
-		<Card href={resolve('/blog')} icon="🖊️">blog</Card>
+		<div class="mb_lg">
+			<Card href={resolve('/docs')}>docs{#snippet icon()}{pkg.package_json.glyph}{/snippet}</Card>
+		</div>
+		<Card href={resolve('/blog')} icon="🪧">blog</Card>
 	</section>
 	<section>
 		<p>
