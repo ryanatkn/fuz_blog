@@ -1,10 +1,10 @@
 {
   "name": "@ryanatkn/fuz_blog",
-  "version": "0.15.0",
-  "modules": {
-    "./blog_helpers.js": {
+  "version": "0.16.0",
+  "modules": [
+    {
       "path": "blog_helpers.ts",
-      "declarations": [
+      "identifiers": [
         {
           "name": "resolve_blog_post_item",
           "kind": "function"
@@ -27,18 +27,18 @@
         }
       ]
     },
-    "./blog.gen.js": {
+    {
       "path": "blog.gen.ts",
-      "declarations": [
+      "identifiers": [
         {
           "name": "gen",
           "kind": "function"
         }
       ]
     },
-    "./blog.js": {
+    {
       "path": "blog.ts",
-      "declarations": [
+      "identifiers": [
         {
           "name": "Blog_Feed_Data",
           "kind": "type"
@@ -81,9 +81,9 @@
         }
       ]
     },
-    "./feed.js": {
+    {
       "path": "feed.ts",
-      "declarations": [
+      "identifiers": [
         {
           "name": "Feed",
           "kind": "type"
@@ -98,27 +98,35 @@
         }
       ]
     },
-    "./post.task.js": {
+    {
       "path": "post.task.ts",
-      "declarations": [
+      "identifiers": [
+        {
+          "name": "Args",
+          "kind": "variable"
+        },
         {
           "name": "task",
           "kind": "variable"
         }
       ]
     },
-    "./update_post.task.js": {
+    {
       "path": "update_post.task.ts",
-      "declarations": [
+      "identifiers": [
+        {
+          "name": "Args",
+          "kind": "variable"
+        },
         {
           "name": "task",
           "kind": "variable"
         }
       ]
     },
-    "./util.js": {
+    {
       "path": "util.ts",
-      "declarations": [
+      "identifiers": [
         {
           "name": "format_date",
           "kind": "function"
@@ -129,41 +137,41 @@
         }
       ]
     },
-    "./Blog_Post_Header.svelte": {
+    {
       "path": "Blog_Post_Header.svelte",
-      "declarations": [
+      "identifiers": [
         {
           "name": "default",
           "kind": "component"
         }
       ]
     },
-    "./Blog_Post.svelte": {
+    {
       "path": "Blog_Post.svelte",
-      "declarations": [
+      "identifiers": [
         {
           "name": "default",
           "kind": "component"
         }
       ]
     },
-    "./Feed_Item_Date.svelte": {
+    {
       "path": "Feed_Item_Date.svelte",
-      "declarations": [
+      "identifiers": [
         {
           "name": "default",
           "kind": "component"
         }
       ]
     },
-    "./Hash_Link.svelte": {
+    {
       "path": "Hash_Link.svelte",
-      "declarations": [
+      "identifiers": [
         {
           "name": "default",
           "kind": "component"
         }
       ]
     }
-  }
+  ]
 }
