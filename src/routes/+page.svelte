@@ -3,7 +3,7 @@
 	import Card from '@ryanatkn/fuz/Card.svelte';
 	import Svg from '@ryanatkn/fuz/Svg.svelte';
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
-	import Docs_Footer from '@ryanatkn/fuz/Docs_Footer.svelte';
+	import DocsFooter from '@ryanatkn/fuz/DocsFooter.svelte';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
 	import {pkg_context} from '@ryanatkn/fuz/pkg.svelte.js';
 
@@ -66,6 +66,6 @@ $ gro update_post --help`}
 	</section>
 	<section class="mb_xl5 box">
 		<a class="chip mb_xl3" href={resolve('/about')}>about</a>
-		<Docs_Footer {pkg} root_url="https://www.fuz.dev/" />
+		<DocsFooter {pkg} root_url="https://www.fuz.dev/" />
 	</section>
 </main>

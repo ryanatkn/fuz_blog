@@ -1,5 +1,5 @@
 <script lang="ts">
-	// TODO should we publish a `Blog_Post_Footer`? what's useful to do in it?
+	// TODO should we publish a `BlogPostFooter`? what's useful to do in it?
 </script>
 
 <footer>

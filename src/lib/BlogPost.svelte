@@ -4,11 +4,11 @@
 	import Toot from '@ryanatkn/fuz_mastodon/Toot.svelte';
 	import {mastodon_cache_context} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
 
-	import Blog_Post_Header from './Blog_Post_Header.svelte';
-	import {blog_feed_context, type Blog_Post_Data} from './blog.js';
+	import BlogPostHeader from './BlogPostHeader.svelte';
+	import {blog_feed_context, type BlogPostData} from './blog.js';
 
 	interface Props {
-		post: Blog_Post_Data;
+		post: BlogPostData;
 		attrs?: SvelteHTMLElements['article'] | undefined;
 		footer?: Snippet;
 		separator?: Snippet; // TODO currently only used before comments, maybe rename to `comments_header` or something?
@@ -33,7 +33,7 @@
 <div class="blog_post width_upto_md">
 	{#if item}
 		<article {...attrs}>
-			<Blog_Post_Header {item} />
+			<BlogPostHeader {item} />
 			{@render children()}
 			{@render footer?.()}
 			{#if item.comments}

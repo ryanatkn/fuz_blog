@@ -24,7 +24,7 @@ export interface Feed {
 		email?: string;
 	};
 	// TODO date_modified for entire feed?
-	items: Array<Feed_Item>;
+	items: Array<FeedItem>;
 	atom: {
 		feed_url: string;
 	};
@@ -39,7 +39,7 @@ export interface Feed {
 	// TODO support RSS
 }
 
-export interface Feed_Item {
+export interface FeedItem {
 	id: string;
 	title: string;
 	url: string;

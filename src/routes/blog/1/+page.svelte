@@ -1,5 +1,5 @@
 <script lang="ts" module>
-	import type {Blog_Post_Data} from '$lib/blog.js';
+	import type {BlogPostData} from '$lib/blog.js';
 
 	export const post = {
 		title: 'Hello fuz_blog',
@@ -12,15 +12,15 @@
 			url: 'https://fosstodon.org/@ryanatkn/114422499177310600',
 			type: 'mastodon',
 		},
-	} satisfies Blog_Post_Data;
+	} satisfies BlogPostData;
 </script>
 
 <script lang="ts">
-	import Blog_Post from '$lib/Blog_Post.svelte';
-	import Blog_Post_Footer from '$routes/blog/Blog_Post_Footer.svelte';
+	import BlogPost from '$lib/BlogPost.svelte';
+	import BlogPostFooter from '$routes/blog/BlogPostFooter.svelte';
 </script>
 
-<Blog_Post {post}>
+<BlogPost {post}>
 	<section>
 		<p>
 			This is <code>fuz_blog</code>'s first blog post. <code>fuz_blog</code>
@@ -37,6 +37,6 @@
 		</p>
 	</section>
 	{#snippet footer()}
-		<Blog_Post_Footer />
+		<BlogPostFooter />
 	{/snippet}
-</Blog_Post>
+</BlogPost>

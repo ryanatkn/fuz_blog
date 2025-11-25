@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {asset, resolve} from '$app/paths';
 
-	import Feed_Item_Date from '$lib/Feed_Item_Date.svelte';
+	import FeedItemDate from '$lib/FeedItemDate.svelte';
 	import {blog_feed_context} from '$lib/blog.js';
 	import {to_pathname} from '$lib/util.js';
 
@@ -15,7 +15,7 @@
 		{#each items as item (item)}
 			<li class="blog_card">
 				<a href={resolve(to_pathname(item.url, feed.home_page_url) as any)}>{item.title}</a>
-				<div class="date"><Feed_Item_Date {item} /></div>
+				<div class="date"><FeedItemDate {item} /></div>
 			</li>
 		{:else}
 			no blog posts yet!

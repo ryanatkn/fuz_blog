@@ -2,15 +2,15 @@ import {strip_end} from '@ryanatkn/belt/string.js';
 import {join} from 'node:path';
 import {existsSync} from 'node:fs';
 
-import type {Blog_Post_Id, Blog_Post_Data, Blog_Post_Item, Blog_Post_Module} from './blog.js';
+import type {BlogPostId, BlogPostData, BlogPostItem, BlogPostModule} from './blog.js';
 
 // TODO maybe move non-node stuff to `blog`, maybe rename this to `blog_fs_helpers`?
 
 export const resolve_blog_post_item = (
-	blog_post_id: Blog_Post_Id,
+	blog_post_id: BlogPostId,
 	blog_url: string,
-	post: Blog_Post_Data,
-): Blog_Post_Item => {
+	post: BlogPostData,
+): BlogPostItem => {
 	const final_blog_url = strip_end(blog_url, '/');
 	return {
 		id: final_blog_url + '/' + blog_post_id,
@@ -30,10 +30,10 @@ export const resolve_blog_post_item = (
  * Returns an array of all of the sequential blog post ids starting with 1.
  * When it fails to find the next id, the sequence ends.
  */
-export const collect_blog_post_ids = (blog_dir: string): Array<Blog_Post_Id> => {
-	const blog_post_ids: Array<Blog_Post_Id> = [];
+export const collect_blog_post_ids = (blog_dir: string): Array<BlogPostId> => {
+	const blog_post_ids: Array<BlogPostId> = [];
 
-	let blog_post_id: Blog_Post_Id = 1;
+	let blog_post_id: BlogPostId = 1;
 	while (true) {
 		if (!existsSync(to_blog_post_path(blog_dir, blog_post_id))) {
 			break;
@@ -47,14 +47,14 @@ export const collect_blog_post_ids = (blog_dir: string): Array<Blog_Post_Id> => 
 
 export const load_blog_post_modules = (
 	blog_dir: string,
-	blog_post_ids: Array<Blog_Post_Id>,
-): Promise<Array<Blog_Post_Module>> =>
+	blog_post_ids: Array<BlogPostId>,
+): Promise<Array<BlogPostModule>> =>
 	Promise.all(blog_post_ids.map((item) => import(join(blog_dir, item.toString(), '+page.svelte'))));
 
-export const to_next_blog_post_id = (blog_post_ids: Array<Blog_Post_Id>): Blog_Post_Id => {
+export const to_next_blog_post_id = (blog_post_ids: Array<BlogPostId>): BlogPostId => {
 	const last = blog_post_ids.at(-1);
 	return last === undefined ? 1 : last + 1;
 };
 
-export const to_blog_post_path = (blog_dir: string, blog_post_id: Blog_Post_Id): string =>
+export const to_blog_post_path = (blog_dir: string, blog_post_id: BlogPostId): string =>
 	join(blog_dir, blog_post_id + '/+page.svelte');

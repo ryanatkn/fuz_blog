@@ -93,7 +93,7 @@
 
 ### Patch Changes
 
-- add optional separator snippet to `Blog_Post` ([effd757](https://github.com/ryanatkn/fuz_blog/commit/effd757))
+- add optional separator snippet to `BlogPost` ([effd757](https://github.com/ryanatkn/fuz_blog/commit/effd757))
 
 ## 0.4.0
 
@@ -107,8 +107,8 @@
 
 - add `gro post` title support ([#4](https://github.com/ryanatkn/fuz_blog/pull/4), [067f9b0](https://github.com/ryanatkn/fuz_blog/commit/067f9b007900a57487d02f43b96231f2ae039ddb))
 - update blog post footer ([#4](https://github.com/ryanatkn/fuz_blog/pull/4))
-  - unpublish `Blog_Post_Footer`
-  - add `footer` snippet prop to `Blog_Post`
+  - unpublish `BlogPostFooter`
+  - add `footer` snippet prop to `BlogPost`
 
 ### Patch Changes
 

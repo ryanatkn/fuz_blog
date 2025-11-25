@@ -1,52 +1,52 @@
 import type {Component} from 'svelte';
-import type {Flavored, Omit_Strict} from '@ryanatkn/belt/types.js';
+import type {Flavored, OmitStrict} from '@ryanatkn/belt/types.js';
 import {create_context} from '@ryanatkn/fuz/context_helpers.js';
 
 import type {Feed} from './feed.js';
 
-// TODO inconsistent naming with `Blog_Post_Data` and `Blog_Post_Item`,
-// consider `BlogItem` or `Blog_Feed_Item`?
+// TODO inconsistent naming with `BlogPostData` and `BlogPostItem`,
+// consider `BlogItem` or `BlogFeedItem`?
 // maybe `Metadata` instead of `Data` in both cases?
-// also think about `Blog_Feed_Item` instead of `Blog_Post_Item`
-export type Blog_Feed_Data = Omit_Strict<Feed, 'items'>;
+// also think about `BlogFeedItem` instead of `BlogPostItem`
+export type BlogFeedData = OmitStrict<Feed, 'items'>;
 
-export interface Blog_Feed extends Feed {
-	items: Array<Blog_Post_Item>;
+export interface BlogFeed extends Feed {
+	items: Array<BlogPostItem>;
 }
 
 /**
  * The author-defined data for each post.
  */
-export interface Blog_Post_Data {
+export interface BlogPostData {
 	title: string;
 	slug: string;
 	date_published: string; // TODO maybe calculated instead of manually defined?
 	date_modified: string; // TODO maybe calculated instead of manually defined?
 	summary: string;
 	tags?: Array<string>;
-	comments?: Blog_Comments;
+	comments?: BlogComments;
 }
 
 // TODO support other comment providers
-export type Blog_Comments = Mastodon_Blog_Comments;
+export type BlogComments = MastodonBlogComments;
 
-export interface Mastodon_Blog_Comments {
+export interface MastodonBlogComments {
 	url: string;
 	type: 'mastodon';
 }
 
-export interface Blog_Module {
-	blog: Blog_Feed_Data;
+export interface BlogModule {
+	blog: BlogFeedData;
 }
 
-export interface Blog_Post_Module {
-	post: Blog_Post_Data;
+export interface BlogPostModule {
+	post: BlogPostData;
 	default: Component<any>; // TODO types
 }
 
-export type Blog_Post_Id = Flavored<number, 'Blog_Post_Id'>;
+export type BlogPostId = Flavored<number, 'BlogPostId'>;
 
-export interface Blog_Post_Item extends Blog_Post_Data {
+export interface BlogPostItem extends BlogPostData {
 	/**
 	 * Blog post path with `blog_post_id`.
 	 */
@@ -60,9 +60,9 @@ export interface Blog_Post_Item extends Blog_Post_Data {
 	/**
 	 * Incrementing 1-based integer.
 	 */
-	blog_post_id: Blog_Post_Id; // TODO maybe random?
+	blog_post_id: BlogPostId; // TODO maybe random?
 
 	tags: Array<string>; // required
 }
 
-export const blog_feed_context = create_context<Blog_Feed>();
+export const blog_feed_context = create_context<BlogFeed>();
