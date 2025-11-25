@@ -1,5 +1,12 @@
 # @ryanatkn/fuz_blog
 
+## 0.18.0
+
+### Minor Changes
+
+- rename `PascalCase` from `Upper_Snake_Case` (lol) ([ecb0187](https://github.com/ryanatkn/fuz_blog/commit/ecb0187))
+- upgrade peer deps ([ecb0187](https://github.com/ryanatkn/fuz_blog/commit/ecb0187))
+
 ## 0.17.0
 
 ### Minor Changes

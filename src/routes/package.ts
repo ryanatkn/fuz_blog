@@ -6,7 +6,7 @@ import type {SrcJson} from '@ryanatkn/belt/src_json.js';
 
 export const package_json: PackageJson = {
 	name: '@ryanatkn/fuz_blog',
-	version: '0.17.0',
+	version: '0.18.0',
 	description: 'blog software from scratch with SvelteKit',
 	glyph: '🖊️',
 	logo: 'logo.svg',
@@ -100,7 +100,7 @@ export const package_json: PackageJson = {
 
 export const src_json: SrcJson = {
 	name: '@ryanatkn/fuz_blog',
-	version: '0.17.0',
+	version: '0.18.0',
 	modules: [
 		{
 			path: 'blog_helpers.ts',
