@@ -9,13 +9,13 @@
 	import Dialog from '@ryanatkn/fuz/Dialog.svelte';
 	import ContextmenuRoot from '@ryanatkn/fuz/ContextmenuRoot.svelte';
 	import {contextmenu_attachment} from '@ryanatkn/fuz/contextmenu_state.svelte.js';
-	import {Pkg, pkg_context} from '@ryanatkn/fuz/pkg.svelte.js';
+	import {Library, library_context} from '@ryanatkn/fuz/library.svelte.js';
 	import type {Snippet} from 'svelte';
 
 	import Settings from '$routes/Settings.svelte';
 	import {blog_feed_context} from '$lib/blog.js';
 	import {feed} from '$routes/blog/feed.js';
-	import {package_json, src_json} from '$routes/package.js';
+	import {library_json} from '$routes/library.js';
 
 	interface Props {
 		children: Snippet;
@@ -23,7 +23,7 @@
 
 	const {children}: Props = $props();
 
-	pkg_context.set(new Pkg(package_json, src_json));
+	library_context.set(new Library(library_json));
 
 	blog_feed_context.set(feed);
 
