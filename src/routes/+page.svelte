@@ -22,7 +22,9 @@
 	</section>
 	<section class="box">
 		<div class="mb_lg">
-			<Card href={resolve('/docs')}>docs{#snippet icon()}{library.package_json.glyph}{/snippet}</Card>
+			<Card href={resolve('/docs')}
+				>docs{#snippet icon()}{library.package_json.glyph}{/snippet}</Card
+			>
 		</div>
 		<Card href={resolve('/blog')} icon="🪧">blog</Card>
 	</section>
