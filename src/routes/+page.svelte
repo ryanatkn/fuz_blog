@@ -5,9 +5,9 @@
 	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
 	import DocsFooter from '@ryanatkn/fuz/DocsFooter.svelte';
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
-	import {pkg_context} from '@ryanatkn/fuz/pkg.svelte.js';
+	import {library_context} from '@ryanatkn/fuz/library.svelte.js';
 
-	const pkg = pkg_context.get();
+	const library = library_context.get();
 
 	/* eslint-disable @typescript-eslint/no-unnecessary-template-expression */
 </script>
@@ -22,7 +22,7 @@
 	</section>
 	<section class="box">
 		<div class="mb_lg">
-			<Card href={resolve('/docs')}>docs{#snippet icon()}{pkg.package_json.glyph}{/snippet}</Card>
+			<Card href={resolve('/docs')}>docs{#snippet icon()}{library.package_json.glyph}{/snippet}</Card>
 		</div>
 		<Card href={resolve('/blog')} icon="🪧">blog</Card>
 	</section>
@@ -40,7 +40,7 @@ ${'<'}script lang="ts">
 	set_blog_feed(feed);
 
 	// To get the feed from any descendent:
-	const feed = get_blog_feed(); 
+	const feed = get_blog_feed();
 </script>
 
 <svelte:head>
@@ -66,6 +66,6 @@ $ gro update_post --help`}
 	</section>
 	<section class="mb_xl5 box">
 		<a class="chip mb_xl3" href={resolve('/about')}>about</a>
-		<DocsFooter {pkg} root_url="https://www.fuz.dev/" />
+		<DocsFooter {library} root_url="https://www.fuz.dev/" />
 	</section>
 </main>
