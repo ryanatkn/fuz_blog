@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.19.0
+
+### Minor Changes
+
+- upgrade deps ([457ce96](https://github.com/ryanatkn/fuz_blog/commit/457ce96))
+
 ## 0.18.0
 
 ### Minor Changes

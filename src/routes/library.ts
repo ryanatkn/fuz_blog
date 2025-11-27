@@ -5,7 +5,7 @@ import type {LibraryJson} from '@ryanatkn/belt/library_json.js';
 export const library_json: LibraryJson = {
 	package_json: {
 		name: '@ryanatkn/fuz_blog',
-		version: '0.18.0',
+		version: '0.19.0',
 		description: 'blog software from scratch with SvelteKit',
 		glyph: '🖊️',
 		logo: 'logo.svg',
@@ -98,7 +98,7 @@ export const library_json: LibraryJson = {
 	},
 	source_json: {
 		name: '@ryanatkn/fuz_blog',
-		version: '0.18.0',
+		version: '0.19.0',
 		modules: [
 			{
 				path: 'blog_helpers.ts',
