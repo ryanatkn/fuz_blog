@@ -14,7 +14,7 @@ import type {BlogFeed, BlogModule} from './blog.js';
 export const gen: Gen = async ({origin_path}) => {
 	// TODO @many parameterize and refactor
 
-	const package_json = load_package_json();
+	const package_json = await load_package_json();
 	const fuz_blog_import_path =
 		package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
 

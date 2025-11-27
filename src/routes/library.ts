@@ -38,16 +38,16 @@ export const library_json: LibraryJson = {
 		},
 		devDependencies: {
 			'@changesets/changelog-git': '^0.2.1',
-			'@ryanatkn/belt': '^0.40.0',
+			'@ryanatkn/belt': '^0.41.1',
 			'@ryanatkn/eslint-config': '^0.9.0',
-			'@ryanatkn/fuz': '^0.165.0',
+			'@ryanatkn/fuz': '^0.168.0',
 			'@ryanatkn/fuz_code': '^0.36.0',
 			'@ryanatkn/fuz_mastodon': '^0.36.0',
-			'@ryanatkn/gro': '^0.179.0',
+			'@ryanatkn/gro': '^0.180.0',
 			'@ryanatkn/moss': '^0.39.0',
 			'@sveltejs/adapter-static': '^3.0.10',
 			'@sveltejs/kit': '^2.49.0',
-			'@sveltejs/package': '^2.5.6',
+			'@sveltejs/package': '^2.5.7',
 			'@sveltejs/vite-plugin-svelte': '^6.2.1',
 			'@types/node': '^24.10.1',
 			'date-fns': '^4.1.0',
@@ -55,7 +55,7 @@ export const library_json: LibraryJson = {
 			'eslint-plugin-svelte': '^3.13.0',
 			prettier: '^3.6.2',
 			'prettier-plugin-svelte': '^3.4.0',
-			svelte: '^5.44.1',
+			svelte: '^5.45.2',
 			'svelte-check': '^4.3.4',
 			tslib: '^2.8.1',
 			typescript: '^5.9.3',
@@ -114,17 +114,14 @@ export const library_json: LibraryJson = {
 							{
 								name: 'blog_post_id',
 								type: 'BlogPostId',
-								optional: false,
 							},
 							{
 								name: 'blog_url',
 								type: 'string',
-								optional: false,
 							},
 							{
 								name: 'post',
 								type: 'BlogPostData',
-								optional: false,
 							},
 						],
 					},
@@ -140,7 +137,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'blog_dir',
 								type: 'string',
-								optional: false,
 							},
 						],
 					},
@@ -155,12 +151,10 @@ export const library_json: LibraryJson = {
 							{
 								name: 'blog_dir',
 								type: 'string',
-								optional: false,
 							},
 							{
 								name: 'blog_post_ids',
 								type: 'BlogPostId[]',
-								optional: false,
 							},
 						],
 					},
@@ -174,7 +168,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'blog_post_ids',
 								type: 'BlogPostId[]',
-								optional: false,
 							},
 						],
 					},
@@ -188,12 +181,10 @@ export const library_json: LibraryJson = {
 							{
 								name: 'blog_dir',
 								type: 'string',
-								optional: false,
 							},
 							{
 								name: 'blog_post_id',
 								type: 'BlogPostId',
-								optional: false,
 							},
 						],
 					},
@@ -385,7 +376,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'post',
 								type: 'BlogPostData',
-								optional: false,
 							},
 							{
 								name: 'attrs',
@@ -405,7 +395,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'children',
 								type: 'Snippet',
-								optional: false,
 							},
 						],
 						source_line: 1,
@@ -423,7 +412,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'item',
 								type: 'BlogPostItem',
-								optional: false,
 							},
 						],
 						source_line: 1,
@@ -543,7 +531,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'data',
 								type: 'Feed',
-								optional: false,
 							},
 						],
 					},
@@ -560,7 +547,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'item',
 								type: 'FeedItem',
-								optional: false,
 							},
 						],
 						source_line: 1,
@@ -579,12 +565,10 @@ export const library_json: LibraryJson = {
 							{
 								name: 'slug',
 								type: 'string',
-								optional: false,
 							},
 							{
 								name: 'children',
 								type: 'Snippet',
-								optional: false,
 							},
 						],
 						source_line: 1,
@@ -613,7 +597,6 @@ export const library_json: LibraryJson = {
 							{
 								name: 'date',
 								type: 'string | number | Date',
-								optional: false,
 							},
 						],
 					},
@@ -627,12 +610,10 @@ export const library_json: LibraryJson = {
 							{
 								name: 'url',
 								type: 'string',
-								optional: false,
 							},
 							{
 								name: 'root',
 								type: 'string',
-								optional: false,
 							},
 						],
 					},
