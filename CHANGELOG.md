@@ -1,5 +1,11 @@
 # @ryanatkn/fuz_blog
 
+## 0.20.0
+
+### Minor Changes
+
+- move to fuzdev ([c06ccef](https://github.com/fuzdev/fuz_blog/commit/c06ccef))
+
 ## 0.19.0
 
 ### Minor Changes
