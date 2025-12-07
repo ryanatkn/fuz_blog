@@ -1,0 +1,177 @@
+{
+  "name": "@fuzdev/fuz_blog",
+  "version": "0.20.0",
+  "modules": [
+    {
+      "path": "blog_helpers.ts",
+      "declarations": [
+        {
+          "name": "resolve_blog_post_item",
+          "kind": "function"
+        },
+        {
+          "name": "collect_blog_post_ids",
+          "kind": "function"
+        },
+        {
+          "name": "load_blog_post_modules",
+          "kind": "function"
+        },
+        {
+          "name": "to_next_blog_post_id",
+          "kind": "function"
+        },
+        {
+          "name": "to_blog_post_path",
+          "kind": "function"
+        }
+      ]
+    },
+    {
+      "path": "blog.gen.ts",
+      "declarations": [
+        {
+          "name": "gen",
+          "kind": "function"
+        }
+      ]
+    },
+    {
+      "path": "blog.ts",
+      "declarations": [
+        {
+          "name": "BlogFeedData",
+          "kind": "type"
+        },
+        {
+          "name": "BlogFeed",
+          "kind": "type"
+        },
+        {
+          "name": "BlogPostData",
+          "kind": "type"
+        },
+        {
+          "name": "BlogComments",
+          "kind": "type"
+        },
+        {
+          "name": "MastodonBlogComments",
+          "kind": "type"
+        },
+        {
+          "name": "BlogModule",
+          "kind": "type"
+        },
+        {
+          "name": "BlogPostModule",
+          "kind": "type"
+        },
+        {
+          "name": "BlogPostId",
+          "kind": "type"
+        },
+        {
+          "name": "BlogPostItem",
+          "kind": "type"
+        },
+        {
+          "name": "blog_feed_context",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "path": "feed.ts",
+      "declarations": [
+        {
+          "name": "Feed",
+          "kind": "type"
+        },
+        {
+          "name": "FeedItem",
+          "kind": "type"
+        },
+        {
+          "name": "create_atom_feed",
+          "kind": "function"
+        }
+      ]
+    },
+    {
+      "path": "post.task.ts",
+      "declarations": [
+        {
+          "name": "Args",
+          "kind": "variable"
+        },
+        {
+          "name": "task",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "path": "update_post.task.ts",
+      "declarations": [
+        {
+          "name": "Args",
+          "kind": "variable"
+        },
+        {
+          "name": "task",
+          "kind": "variable"
+        }
+      ]
+    },
+    {
+      "path": "util.ts",
+      "declarations": [
+        {
+          "name": "format_date",
+          "kind": "function"
+        },
+        {
+          "name": "to_pathname",
+          "kind": "function"
+        }
+      ]
+    },
+    {
+      "path": "BlogPost.svelte",
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
+    },
+    {
+      "path": "BlogPostHeader.svelte",
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
+    },
+    {
+      "path": "FeedItemDate.svelte",
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
+    },
+    {
+      "path": "HashLink.svelte",
+      "declarations": [
+        {
+          "name": "default",
+          "kind": "component"
+        }
+      ]
+    }
+  ]
+}
