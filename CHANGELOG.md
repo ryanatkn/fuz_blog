@@ -1,4 +1,4 @@
-# @ryanatkn/fuz_blog
+# @fuzdev/fuz_blog
 
 ## 0.20.0
 
