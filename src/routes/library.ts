@@ -43,7 +43,6 @@ export const library_json: LibraryJson = {
 			'@fuzdev/fuz_mastodon': '^0.37.0',
 			'@fuzdev/fuz_ui': '^0.169.0',
 			'@fuzdev/fuz_util': '^0.42.0',
-			'@ryanatkn/belt': '^0.41.1',
 			'@ryanatkn/eslint-config': '^0.9.0',
 			'@ryanatkn/gro': '^0.181.0',
 			'@sveltejs/adapter-static': '^3.0.10',
