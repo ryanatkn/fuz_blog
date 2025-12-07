@@ -4,7 +4,7 @@ import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
 import {load_package_json} from '@ryanatkn/gro/package_json.js';
-import {slugify} from '@ryanatkn/belt/path.js';
+import {slugify} from '@fuzdev/fuz_util/path.js';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from './blog_helpers.js';
 
@@ -37,7 +37,7 @@ export const task: Task<Args> = {
 
 		const package_json = await load_package_json();
 		const fuz_blog_import_path =
-			package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
+			package_json.name === '@fuzdev/fuz_blog' ? '$lib' : '@fuzdev/fuz_blog';
 
 		const dir = process.cwd();
 		const blog_dirname = 'blog'; // TODO @many harcoded /blog/

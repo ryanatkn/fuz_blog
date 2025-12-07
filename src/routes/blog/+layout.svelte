@@ -1,13 +1,13 @@
 <script lang="ts">
-	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
-	import Svg from '@ryanatkn/fuz/Svg.svelte';
-	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
+	import Breadcrumb from '@fuzdev/fuz_ui/Breadcrumb.svelte';
+	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
+	import {fuz_blog_logo} from '@fuzdev/fuz_ui/logos.js';
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
 	import {
 		MastodonCache,
 		mastodon_cache_context,
-	} from '@ryanatkn/fuz_mastodon/mastodon_cache.svelte.js';
+	} from '@fuzdev/fuz_mastodon/mastodon_cache.svelte.js';
 
 	interface Props {
 		children: Snippet;

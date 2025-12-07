@@ -1,11 +1,11 @@
 <script lang="ts">
 	import {resolve} from '$app/paths';
-	import Card from '@ryanatkn/fuz/Card.svelte';
-	import Svg from '@ryanatkn/fuz/Svg.svelte';
-	import {fuz_blog_logo} from '@ryanatkn/fuz/logos.js';
-	import DocsFooter from '@ryanatkn/fuz/DocsFooter.svelte';
-	import Code from '@ryanatkn/fuz_code/Code.svelte';
-	import {library_context} from '@ryanatkn/fuz/library.svelte.js';
+	import Card from '@fuzdev/fuz_ui/Card.svelte';
+	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
+	import {fuz_blog_logo} from '@fuzdev/fuz_ui/logos.js';
+	import DocsFooter from '@fuzdev/fuz_ui/DocsFooter.svelte';
+	import Code from '@fuzdev/fuz_code/Code.svelte';
+	import {library_context} from '@fuzdev/fuz_ui/library.svelte.js';
 
 	const library = library_context.get();
 
@@ -35,7 +35,7 @@
 		<Code
 			content={`<!-- src/routes/+layout.svelte -->
 ${'<'}script lang="ts">
-	import {set_blog_feed, get_blog_feed} from '@ryanatkn/fuz_blog/blog.js';
+	import {set_blog_feed, get_blog_feed} from '@fuzdev/fuz_blog/blog.js';
 
 	import {feed} from '$routes/blog/feed.js';
 

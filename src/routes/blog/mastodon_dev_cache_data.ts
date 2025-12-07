@@ -1,5 +1,5 @@
-import type {Url} from '@ryanatkn/belt/url.js';
-import type {FetchValueCacheItem} from '@ryanatkn/belt/fetch.js';
+import type {Url} from '@fuzdev/fuz_util/url.js';
+import type {FetchValueCacheItem} from '@fuzdev/fuz_util/fetch.js';
 
 export const mastodon_dev_cache_data: Array<[Url, FetchValueCacheItem]> = [
 	[
@@ -214,7 +214,7 @@ export const mastodon_dev_cache_data: Array<[Url, FetchValueCacheItem]> = [
 				favourites_count: 0,
 				edited_at: null,
 				content:
-					'<p>Mastodon is the first supported backend for comments in fuz_blog, which is a SvelteKit/Svelte/TypeScript library for devs to create blogs</p><p>blog posts just need to point to a toot on Mastodon</p><p>this post is visible at <a href="https://blog.fuz.dev/blog/1" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="">blog.fuz.dev/blog/1</span><span class="invisible"></span></a> and the code that added this functionality is at <a href="https://github.com/ryanatkn/fuz_blog/pull/5" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="ellipsis">github.com/ryanatkn/fuz_blog/p</span><span class="invisible">ull/5</span></a></p><p>replies to this post that I favourite show up on the blog using fuz_mastodon - <a href="https://github.com/ryanatkn/fuz_mastodon" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="ellipsis">github.com/ryanatkn/fuz_mastod</span><span class="invisible">on</span></a></p>',
+					'<p>Mastodon is the first supported backend for comments in fuz_blog, which is a SvelteKit/Svelte/TypeScript library for devs to create blogs</p><p>blog posts just need to point to a toot on Mastodon</p><p>this post is visible at <a href="https://blog.fuz.dev/blog/1" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="">blog.fuz.dev/blog/1</span><span class="invisible"></span></a> and the code that added this functionality is at <a href="https://github.com/fuzdev/fuz_blog/pull/5" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="ellipsis">github.com/fuzdev/fuz_blog/p</span><span class="invisible">ull/5</span></a></p><p>replies to this post that I favourite show up on the blog using fuz_mastodon - <a href="https://github.com/fuzdev/fuz_mastodon" target="_blank" rel="nofollow noopener noreferrer" translate="no"><span class="invisible">https://</span><span class="ellipsis">github.com/fuzdev/fuz_mastod</span><span class="invisible">on</span></a></p>',
 				reblog: null,
 				application: null,
 				account: {
