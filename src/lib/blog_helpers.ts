@@ -1,4 +1,4 @@
-import {strip_end} from '@ryanatkn/belt/string.js';
+import {strip_end} from '@fuzdev/fuz_util/string.js';
 import {join} from 'node:path';
 import {existsSync} from 'node:fs';
 

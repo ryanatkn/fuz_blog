@@ -1,6 +1,6 @@
 import type {Component} from 'svelte';
-import type {Flavored, OmitStrict} from '@ryanatkn/belt/types.js';
-import {create_context} from '@ryanatkn/fuz/context_helpers.js';
+import type {Flavored, OmitStrict} from '@fuzdev/fuz_util/types.js';
+import {create_context} from '@fuzdev/fuz_ui/context_helpers.js';
 
 import type {Feed} from './feed.js';
 

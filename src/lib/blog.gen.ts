@@ -16,7 +16,7 @@ export const gen: Gen = async ({origin_path}) => {
 
 	const package_json = await load_package_json();
 	const fuz_blog_import_path =
-		package_json.name === '@ryanatkn/fuz_blog' ? '$lib' : '@ryanatkn/fuz_blog';
+		package_json.name === '@fuzdev/fuz_blog' ? '$lib' : '@fuzdev/fuz_blog';
 
 	const dir = process.cwd();
 	const blog_dirname = 'blog';
