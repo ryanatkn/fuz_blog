@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type {Snippet} from 'svelte';
 
-	// TODO maybe move to Fuz
+	// TODO maybe move to Fuz UI
 
 	interface Props {
 		slug: string;
