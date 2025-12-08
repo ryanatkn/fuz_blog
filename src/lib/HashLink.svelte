@@ -3,12 +3,13 @@
 
 	// TODO maybe move to Fuz UI
 
-	interface Props {
+	const {
+		slug,
+		children,
+	}: {
 		slug: string;
 		children: Snippet;
-	}
-
-	const {slug, children}: Props = $props();
+	} = $props();
 </script>
 
 <div class="hash_link" id={slug}>

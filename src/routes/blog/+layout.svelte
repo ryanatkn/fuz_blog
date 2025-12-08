@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Breadcrumb from '@fuzdev/fuz_ui/Breadcrumb.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
-	import {fuz_blog_logo} from '@fuzdev/fuz_ui/logos.js';
+	import {logo_fuz_blog} from '@fuzdev/fuz_ui/logos.js';
 	import {DEV} from 'esm-env';
 	import type {Snippet} from 'svelte';
 	import {
@@ -9,11 +9,11 @@
 		mastodon_cache_context,
 	} from '@fuzdev/fuz_mastodon/mastodon_cache.svelte.js';
 
-	interface Props {
+	const {
+		children,
+	}: {
 		children: Snippet;
-	}
-
-	const {children}: Props = $props();
+	} = $props();
 
 	if (DEV) {
 		mastodon_cache_context.set(
@@ -42,13 +42,13 @@
 </script>
 
 <div class="breadcrumbs">
-	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--font_size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={logo_fuz_blog} size="var(--font_size_xl)" /></Breadcrumb>
 </div>
 <div class="wrapper">
 	{@render children()}
 </div>
 <div class="breadcrumbs mb_xl9">
-	<Breadcrumb><Svg data={fuz_blog_logo} size="var(--font_size_xl)" /></Breadcrumb>
+	<Breadcrumb><Svg data={logo_fuz_blog} size="var(--font_size_xl)" /></Breadcrumb>
 </div>
 
 <!-- TODO 404, needs to work with prerendering -->

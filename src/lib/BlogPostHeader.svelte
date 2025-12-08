@@ -2,11 +2,11 @@
 	import FeedItemDate from './FeedItemDate.svelte';
 	import type {BlogPostItem} from './blog.js';
 
-	interface Props {
+	const {
+		item,
+	}: {
 		item: BlogPostItem;
-	}
-
-	const {item}: Props = $props();
+	} = $props();
 </script>
 
 <header>

@@ -17,11 +17,11 @@
 	import {feed} from '$routes/blog/feed.js';
 	import {library_json} from '$routes/library.js';
 
-	interface Props {
+	const {
+		children,
+	}: {
 		children: Snippet;
-	}
-
-	const {children}: Props = $props();
+	} = $props();
 
 	library_context.set(new Library(library_json));
 

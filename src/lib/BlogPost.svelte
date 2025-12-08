@@ -7,15 +7,19 @@
 	import BlogPostHeader from './BlogPostHeader.svelte';
 	import {blog_feed_context, type BlogPostData} from './blog.js';
 
-	interface Props {
+	const {
+		post,
+		attrs,
+		footer,
+		separator = default_separator,
+		children,
+	}: {
 		post: BlogPostData;
 		attrs?: SvelteHTMLElements['article'] | undefined;
 		footer?: Snippet;
 		separator?: Snippet; // TODO currently only used before comments, maybe rename to `comments_header` or something?
 		children: Snippet;
-	}
-
-	const {post, attrs, footer, separator = default_separator, children}: Props = $props();
+	} = $props();
 
 	const feed = blog_feed_context.get();
 

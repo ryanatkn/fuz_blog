@@ -2,7 +2,7 @@
 	import {resolve} from '$app/paths';
 	import Card from '@fuzdev/fuz_ui/Card.svelte';
 	import Svg from '@fuzdev/fuz_ui/Svg.svelte';
-	import {fuz_blog_logo} from '@fuzdev/fuz_ui/logos.js';
+	import {logo_fuz_blog} from '@fuzdev/fuz_ui/logos.js';
 	import DocsFooter from '@fuzdev/fuz_ui/DocsFooter.svelte';
 	import Code from '@fuzdev/fuz_code/Code.svelte';
 	import {library_context} from '@fuzdev/fuz_ui/library.svelte.js';
@@ -15,7 +15,7 @@
 <main class="mx_auto p_lg width_upto_md">
 	<section class="box">
 		<header class="pt_sm">
-			<Svg data={fuz_blog_logo} size="var(--icon_size_xl3)" />
+			<Svg data={logo_fuz_blog} size="var(--icon_size_xl3)" />
 			<h1 class="mt_xl2 text_align_center">fuz_blog</h1>
 		</header>
 		<blockquote>blog software from scratch with SvelteKit</blockquote>
