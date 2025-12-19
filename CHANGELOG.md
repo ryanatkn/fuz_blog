@@ -1,5 +1,11 @@
 # @fuzdev/fuz_blog
 
+## 0.21.0
+
+### Minor Changes
+
+- upgrade gro ([26ae56a](https://github.com/fuzdev/fuz_blog/commit/26ae56a))
+
 ## 0.20.0
 
 ### Minor Changes
