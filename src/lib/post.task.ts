@@ -3,7 +3,7 @@ import {z} from 'zod';
 import {format_file} from '@ryanatkn/gro/format_file.js';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
-import {load_package_json} from '@ryanatkn/gro/package_json.js';
+import {package_json_load} from '@ryanatkn/gro/package_json.js';
 import {slugify} from '@fuzdev/fuz_util/path.js';
 
 import {collect_blog_post_ids, to_next_blog_post_id} from './blog_helpers.js';
@@ -35,7 +35,7 @@ export const task: Task<Args> = {
 
 		// TODO @many parameterize and refactor
 
-		const package_json = await load_package_json();
+		const package_json = await package_json_load();
 		const fuz_blog_import_path =
 			package_json.name === '@fuzdev/fuz_blog' ? '$lib' : '@fuzdev/fuz_blog';
 

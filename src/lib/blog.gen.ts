@@ -1,6 +1,6 @@
 import type {Gen} from '@ryanatkn/gro/gen.js';
 import {join} from 'node:path';
-import {load_package_json} from '@ryanatkn/gro/package_json.js';
+import {package_json_load} from '@ryanatkn/gro/package_json.js';
 
 import {create_atom_feed} from './feed.js';
 import {
@@ -14,7 +14,7 @@ import type {BlogFeed, BlogModule} from './blog.js';
 export const gen: Gen = async ({origin_path}) => {
 	// TODO @many parameterize and refactor
 
-	const package_json = await load_package_json();
+	const package_json = await package_json_load();
 	const fuz_blog_import_path =
 		package_json.name === '@fuzdev/fuz_blog' ? '$lib' : '@fuzdev/fuz_blog';
 
